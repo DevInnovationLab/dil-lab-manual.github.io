@@ -2,7 +2,7 @@
 
 ## Summary
 
-- **File name**                 : C:\Program Files\Stata17\ado\base/a/auto.dta 
+- **File name**                 : C:/Program Files/Stata17/ado/base/a/auto.dta 
 - **Description**               : 1978 automobile data                         
 - **Source**                    : Stata Corp                                   
 - **Unit of observation**       : Automobile make and model                    
