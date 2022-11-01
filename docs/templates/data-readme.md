@@ -7,7 +7,8 @@
 - **Source**                    : Stata Corp                                   
 - **Unit of observation**       : Automobile make and model                    
 - **Key**                       : `make`                                       
-- **Number of observations**    : 74                                           
+- **Number of observations**    : 74 
+- **Related code**              : created by `code/import/import-auto.do`, used by `code/analysis/summary-stats.do`                                          
 - **Data collection frequency** :                                              
 - **Data collection period**    : 1978                                         
 - **Geographic coverage**       : United States                                
@@ -16,6 +17,8 @@
 
 
 ## Variable dictionary
+
+*If the dataset has too many variables, include only the main ones below*
 
 | Name           | Description            | Type        | Unit              | Categories                |
 |----------------|------------------------|-------------|-------------------|---------------------------|
