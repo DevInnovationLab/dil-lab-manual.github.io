@@ -4,7 +4,7 @@
 
 - **File name**                 : C:/Program Files/Stata17/ado/base/a/auto.dta 
 - **Description**               : 1978 automobile data                         
-- **Source**                    : [Stata Corp](https://www.stata.com/manuals/dsysuse.pdf)
+- **Source**                    : [Stata Corp](https://www.stata.com/manuals/dsysuse.pdf) *note that there is a link to more documentation. this could be a folder with questionnaires and field notes, or the data provider's original documentation*
 - **Unit of observation**       : Automobile make and model                    
 - **Key**                       : `make`                                       
 - **Number of observations**    : 74 
