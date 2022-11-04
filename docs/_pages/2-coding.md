@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Principles of analytical coding
+layout: post
 nav_order: 2
 ---
-
-# Principles of analytical coding
 
 ## Think critically
 

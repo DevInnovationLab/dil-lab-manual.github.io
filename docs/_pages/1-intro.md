@@ -1,19 +1,15 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
-title: Home
-nav_order: 1
+title: Introduction
+layout: post
 ---
 
-# How to use this guide
+## How to use this guide
 
 The goal of this guide is to introduce some basic principles to make the use of analytics at DIL more transparent and reproducible. "Analytics" is a general term that encapsulates processing and managing data, coding, and statistical or mathematical modeling. The principles described here apply whenever these three elements are present, no matter what software you are using. They are applications of DIL's principles of Responsibility, Reproducibility, Credibility, Scalability, Continuity, Flexibility, and Clarity into analytical work. 
 
 This  guide should be read by all new lab members (especially Research Assistants and Research Professionals). More importantly, though, it should serve as a standing reference that can be consulted by anyone at the Lab. So **we recommend that you start by adding it to your bookmarks bar and come back to it whenever you need it**. The focus of this guide is on compiling and motivating overarching principles. It will not get into details, but will instead prioritize linking to existing resources. Click through the links to see examples, applications, and more in-depth discussions. 
 
-# Motivation
+## Motivation
 
 There is one basic idea behind all the principles in this guide: that anyone at any point should be able to understand, use, and scrutinize all the analytics developed at DIL. This means that for all code that is written to analyze data, it should be easy for anyone to (1) understand what the code is doing (2) run the code, and (3) obtain exactly the same results. More often than not, this person will be a future version of the original code writer.
 

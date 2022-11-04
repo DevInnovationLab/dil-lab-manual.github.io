@@ -1,10 +1,7 @@
 ---
-layout: page
 title: Working with data
-nav_order: 3
+layout: post
 ---
-
-# Working with data
 
 ## Touch whatever you want...
 
