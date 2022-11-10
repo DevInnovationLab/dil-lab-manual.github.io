@@ -22,19 +22,45 @@ layout: post
 
 ## Python
 
+**Consultation materials**
 - [PEP8 Style Guide](https://peps.python.org/pep-0008/)
+
+**Sample code**
+- [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
 
 ## R
 
-- [DIME's R for Stata Users](https://osf.io/86g3b/): introduction to R language using common empirical research tasks. Requires some knowledge of coding (though not necessarily in Stata)
+**Books**
 - [R for Data Science](https://r4ds.had.co.nz/): introductory textbook by RStudio’s Chief Scientist, Hadley Wickham 
+
+**Courses**
+- [DIME's R for Stata Users](https://osf.io/86g3b/): introduction to R language using common empirical research tasks. Requires some knowledge of coding (though not necessarily in Stata)
+
+**Consultation materials**
+- [RStudio cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+- [RStudio IDE shortcuts and tips](https://appsilon.com/rstudio-shortcuts-and-tips/)
 - [Tidyverse Style Guide](https://style.tidyverse.org/)
+
+**Sample code**
+- [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
+
+**Useful packages**
+- [`repex`](https://reprex.tidyverse.org/)
 
 ## Stata
 
+**Courses**
+- [DIME's Stata Training](https://github.com/worldbank/dime-stata-training)
+
+**Consultation materials**
 - [Daniel Feenberg's Stata for very large datasets](https://www.nber.org/stata/efficient/)
 - [DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide)
-- [DIME's Stata Training](https://github.com/worldbank/dime-stata-training)
+- [Stata cheatsheets](https://www.stata.com/bookstore/stata-cheat-sheets/)
+
+**Sample code**
+- [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
+
+**Useful packages**
 - [IPA’s high-frequency checks template](https://github.com/PovertyAction/high-frequency-checks)
 - [IPA GitHub repositories](https://github.com/PovertyAction): functions for Survey CTO and Stata
 
