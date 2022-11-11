@@ -32,6 +32,8 @@ layout: post
 
 **Books**
 - [R for Data Science](https://r4ds.had.co.nz/): introductory textbook by RStudio’s Chief Scientist, Hadley Wickham 
+- [Geocomputation with R](https://geocompr.robinlovelace.net/): introductory textbook for geospatial analysis in R
+- [Spatial Data Science](https://r-spatial.org/book/): more advanced textbook for geospatial analysis in R, with a heavier focus on methods 
 
 **Courses**
 - [DIME's R for Stata Users](https://osf.io/86g3b/): introduction to R language using common empirical research tasks. Requires some knowledge of coding (though not necessarily in Stata)
