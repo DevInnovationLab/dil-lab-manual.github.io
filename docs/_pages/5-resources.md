@@ -52,6 +52,7 @@ layout: post
 
 **Sample code**
 - [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
+- [R main script example](https://github.com/worldbank/geolocation-twitter-urban-planning/blob/main/datawork/_master.R)
 
 **Useful packages**
 - [`repex`](https://reprex.tidyverse.org/)
@@ -67,9 +68,9 @@ layout: post
 - [List of Stata packages for difference-in-differences estimation](https://asjadnaqvi.github.io/DiD/docs/01_stata/): includes sample codes and links to package documentation and original paper
 - [Stata cheatsheets](https://www.stata.com/bookstore/stata-cheat-sheets/)
 
-
 **Sample code**
 - [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
+- [Stata main script example](https://github.com/worldbank/rio-safe-space/blob/master/Reproducibility%20Package/MASTER.do)
 
 **Useful packages**
 - [`gtools`](https://gtools.readthedocs.io/en/latest/): "faster Stata for big data" -- uses C to create faster versions of functions like reshape, collapse, isid, egen, levelsof, duplicates, and unique/distinct.
