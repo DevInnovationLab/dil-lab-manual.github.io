@@ -1,3 +1,9 @@
+---
+layout: default
+parent: DIL templates
+title: Data dictionary
+---
+
 # Auto dataset
 
 ## Summary
@@ -5,7 +11,7 @@
 - **File name**                 : C:/Program Files/Stata17/ado/base/a/auto.dta 
 - **File size**                 : 15 KB
 - **Description**               : 1978 automobile data                         
-- **Source**                    : [Stata Corp](https://www.stata.com/manuals/dsysuse.pdf) *note that there is a link to more documentation. this could be a folder with questionnaires and field notes, or the data provider's original documentation*
+- **Source**                    : Stata Corp
 - **Unit of observation**       : Automobile make and model                    
 - **Key**                       : `make`                                       
 - **Number of observations**    : 74 
@@ -42,3 +48,4 @@
 | `displacement` | Displacement (cu. in.) | Continuous  | Cubic inches      |                           |
 | `gear_ratio`   | Gear ratio             | Continuous  |                   |                           |
 | `foreign`      | Car origin             | Binary      |                   | 0 Domestic <br> 1 Foreign |
+

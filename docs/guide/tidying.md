@@ -2,6 +2,7 @@
 layout: default
 title: Tidying data
 parent: Data work guide
+nav_order: 2
 ---
 
 

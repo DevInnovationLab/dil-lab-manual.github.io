@@ -17,6 +17,9 @@ collections:
     output: true
     name: Resources
 
+# Files that will not be rendered in the website
+# exclude:
+
 # DIL color scheme
 color_scheme: dil
 

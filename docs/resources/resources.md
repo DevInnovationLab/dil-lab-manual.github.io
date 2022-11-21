@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Additional resources
+title: External resources
 nav_order: 4
 has_children: true
 permalink: docs/resources

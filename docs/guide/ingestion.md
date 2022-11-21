@@ -1,7 +1,11 @@
 ---
-title:  Data ingestion guide
-layout: post
+layout: default
+title: Data ingestion
+parent: Data work guide
+nav_order: 1
 ---
+
+# Data ingestion
 
 - Figure of entire process
 
@@ -11,7 +15,7 @@ layout: post
 
 ## De-identifying
 
-- sdcmicro
+- `sdcmicro`
 - Lars' blogpost
 - pii scan
 
