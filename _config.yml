@@ -5,17 +5,21 @@ theme: just-the-docs
 # Point to content
 collections:
   guides:
-    permalink: "docs/guides/"
+    permalink: "guides/"
     output: true
     name: Data work guides
   principles:
-    permalink: "docs/principles/"
+    permalink: "principles/"
     output: true
     name: Analytics principles
-  resources:
-    permalink: "docs/resources/"
+  templates:
+    permalink: "templates/"
     output: true
-    name: Resources
+    name: DIL templates
+  resources:
+    permalink: "resources/"
+    output: true
+    name: External resources
 
 # Files that will not be rendered in the website
 # exclude:
@@ -38,7 +42,6 @@ gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "View on GitHub."
 gh_edit_repository: "https://github.com/DevInnovationLab/guides" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
-gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Callouts

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Tidying data
-parent: Data work guide
+parent: Data work guides
 nav_order: 2
 ---
 
 
-# Tidying data
+# Tidying data guide
 {: .no_toc }
 
 1. TOC

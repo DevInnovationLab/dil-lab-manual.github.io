@@ -1,13 +1,17 @@
 ---
 layout: default
 title: Data ingestion
-parent: Data work guide
+parent: Data work guides
 nav_order: 1
 ---
 
-# Data ingestion
+# Data ingestion guide
+{: .no_toc }
 
-- Figure of entire process
+1. TOC
+{:toc}
+
+---
 
 ## Importing
 

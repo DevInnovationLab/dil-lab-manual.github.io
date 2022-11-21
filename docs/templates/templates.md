@@ -10,4 +10,4 @@ nav_order: 4
 
 ## Documentation
 
-- [Data dictionary/README](https://github.com/DevInnovationLab/lab-manual/blob/gh-pages/docs/templates/data-readme.md)
+- [Data dictionary/README](https://github.com/DevInnovationLab/guides/blob/gh-pages/docs/templates/data-readme.md)

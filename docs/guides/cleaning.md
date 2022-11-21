@@ -1,11 +1,17 @@
 ---
 layout: default
 title: Cleaning data
-parent: Data work guide
+parent: Data work guides
 nav_order: 3
 ---
 
-# Cleaning data
+# Data cleaning guide
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+---
 
 ## What is data cleaning
 

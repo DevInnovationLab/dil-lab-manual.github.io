@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data work guide
+title: Data work guides
 nav_order: 2
 has_children: true
 permalink: docs/guide
