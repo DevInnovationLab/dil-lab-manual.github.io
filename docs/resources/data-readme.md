@@ -3,6 +3,7 @@
 ## Summary
 
 - **File name**                 : C:/Program Files/Stata17/ado/base/a/auto.dta 
+- **File size**                 : 15 KB
 - **Description**               : 1978 automobile data                         
 - **Source**                    : [Stata Corp](https://www.stata.com/manuals/dsysuse.pdf) *note that there is a link to more documentation. this could be a folder with questionnaires and field notes, or the data provider's original documentation*
 - **Unit of observation**       : Automobile make and model                    
@@ -11,10 +12,17 @@
 - **Related code**              : created by `code/import/import-auto.do`, used by `code/analysis/summary-stats.do`                                          
 - **Data collection frequency** :                                              
 - **Data collection period**    : 1978                                         
-- **Geographic coverage**       : United States                                
-- **Sampling procedure**        :                                             
-- **Weights**                   :                                             
-
+- **Geographic coverage**       : United States
+- **Languages**                 : English                                                                    
+- **Weights**                   :   
+- **Description of methods for data collection or generation**:
+  - [Data provider's original documentation](https://www.stata.com/manuals/dsysuse.pdf)
+  - Field manual
+  - Survey instrument
+  - Questionnaire form
+  - Field notes
+  - Quality assurance protocols
+  - Sampling design and procedure                                          
 
 ## Variable dictionary
 
