@@ -14,6 +14,11 @@ parent: External resources
 ## Courses
 - [DIME's R for Stata Users](https://osf.io/86g3b/): introduction to R language using common empirical research tasks. Requires some knowledge of coding (though not necessarily in Stata)
 
+## Community
+
+- [R for Data Science Slack](https://rfordatascience.slack.com/join/shared_invite/zt-1iyj4txaa-x4u8g29zKStGnhPU3lKZwQ#/shared-invite/email): slack workspace for the R4DS community
+- [Tidy Tuesday](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click): weekly R community activity to share data visualizations and the code to create them
+
 ## Consultation materials
 - [List of R packages for difference-in-differences estimation](https://asjadnaqvi.github.io/DiD/docs/02_R/): includes sample codes and links to package documentation and original paper
 - [RStudio cheatsheets](https://www.rstudio.com/resources/cheatsheets/)

@@ -14,6 +14,7 @@ parent: External resources
 
 - [R Econ Visual Library](https://worldbank.github.io/r-econ-visual-library/index.html): sample R code for common economics visualizations
 - [The R Graph Gallery](https://r-graph-gallery.com/index.html): sample R code for data visualization
+- [Tidy Tuesday](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click): weekly R community activity to share data visualizations and the code to create them
 
 ## Stata
 
