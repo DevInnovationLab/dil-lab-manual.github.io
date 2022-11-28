@@ -7,6 +7,7 @@ title: Paper submission checklist
 # Paper submission checklist
 
 ## Proof-read the text
+
 - [ ] All results mentioned in the text are shown in an exhibit (table or figure). If that is not the case, make sure this is intentional and no matching exhibit should be included.
 - [ ] The value of all results mentioned in the text match the values in the corresponding exhibit (if one is referenced).
 - [ ] All claims in the texts are substantiated:
@@ -31,6 +32,7 @@ title: Paper submission checklist
 - [ ] Someone outside the team has also proof-read the text.
 
 ## Check journal guidelines
+
 - [ ] Look at the guidelines for the journal you are submitting to. They usually have a style file that you can plug into LaTeX.
 - [ ] Check if there is a word count or character limit.
 - [ ] Make sure the references follow the citation style indicated by the journal. 
@@ -78,6 +80,7 @@ title: Paper submission checklist
 
 
 ## Review graphs and figures
+
 - [ ] All axes are clearly labeled.
 - [ ] All the units in the graph are clearly defined.
 - [ ] Axes units match the data.
@@ -92,18 +95,22 @@ title: Paper submission checklist
 [Chrome extension to simulate color blindness](https://chrome.google.com/webstore/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg?hl=en#:~:text=Colorblindly&text=Simulates%20colorblindness%20in%20your%20web,those%20users%20have%20on%20websites) {: .btn .btn-more }
 
 ## Check author's names and affiliation
+
 - [ ] All names are spelled correctly.
 - [ ] Affiliation is up to date.
 - [ ] A corresponding author has been indicated.
 - [ ] The email for the corresponding author is up to date.
 
 ## Check numbering of sections and exhibits (tables and graphs)
+
 - [ ] All exhibits are numbered and cited in numeric sequence.
 - [ ] All exhibits present in the paper are referenced in the text.
 - [ ] Appendices are numbered differently from core sections.
 
 ## Check bibliography
+
 - [ ] All references cited in the text, tables and notes are included in the bibliography.
 - [ ] All references listed in the bibliography are cited in the paper.
 - [ ] If using a numbered citation style, all references are numbered in the same order as they are cited in the text.
 
+[Reference management software: Zotero](https://www.zotero.org/support/quick_start_guide) {: .btn .btn-more }
