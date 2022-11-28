@@ -14,6 +14,12 @@ title: Paper submission checklist
   - For each claim, check that it is worded accurately and precisely.
   - For each claim, find evidence.
   - For most claims add a reference (see below how to check references). Claims which could be considered 'general knowledge' may not need to be cited.
+- [ ] Abstract and introduction include a summary of results.
+- [ ] Introduction and literature review take no more than five double-spaced pages (or there is a good reason why this is not the case.
+- [ ] The data is described in the paper, including provenance, number of observations and descriptive statistics.
+  - If any data was dropped, the criteria to do so are clearly described.
+- [ ] Identification strategy is described in a manner that is intelligible to a non-economist.
+- [ ] Empirical procedures are described in enough detail that someone could replicate the work.
 - [ ] All words are spelled correctly (particularly names and foreign words).
 - [ ] No sentences are unfinished and all comments have been removed.
 - [ ] Names are used consistently throughout the text (for example, the same round of data collection is not referred to as both “midline” and “follow-up 1”; not referring to the same characterist as “gender” and “sex” in different places).
@@ -42,23 +48,27 @@ title: Paper submission checklist
 ## Review results and summary statistics tables 
 
 - [ ] All columns and rows clearly labeled.
-  - [ ] Labels are understandable to someone unfamiliar with the project.
-  - [ ] It is clear how values should be interpreted (for example, it is clear whether a higher value for an index is desirable or not).
+  - Labels are understandable to someone unfamiliar with the project.
+  - It is clear how values should be interpreted (for example, it is clear whether a higher value for an index is desirable or not).
 - [ ] There are no unintentional line breaks and no text is cut-off.
 - [ ] Formatting is consistent across all tables.
 - [ ] The number of decimal cases shown makes sense for all the values displayed.
 - [ ] Values in the table are consistent with the content they represent (for example, dummy/categorical variables should only take values between zero and one, variables like income and age should never be negative).
+- [ ] Table titles are self-explanatory.
+- [ ] All tables include basic information such as sample size and R*.
 - [ ] The table notes contain all the necessary information for it to be understood as a self-standing exhibit, including
   - Variable definitions describing level of winsorization, imputation, definition of indexes, logs, etc.
   - Sample description (and explanation of why the number of observations is different across columns if that is the case).
-  - Description ofsymbols used to indicate different levels of significance.
-  - How missing values and zeros are treated.
+  - Description of symbols used to indicate different levels of significance.
+  - Description of how missing values and zeros are treated.
+
 
 ### Regression tables
 
 - [ ] The magnitude of effects is clear (consider adding the sample or control mean).
 - [ ] Test results for any conclusions mentioned in the text are included (such as equality between coefficients and significance of effects in subgroups).
 - [ ] Only interpretable coefficients are shown (for example, for regressions with fixed effects, the constant is not included).
+- [ ] Tables show standard errors rather than t-statistics.
 - [ ] Methods used to calculate standard errors are described in the table notes.
 - [ ] Control variables or fixed effects used are shown in the table or described in the botes.
 - [ ] Weighting method used is described in the notes.
