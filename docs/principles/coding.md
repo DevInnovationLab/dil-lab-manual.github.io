@@ -42,7 +42,7 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 - **Make inputs explicit.**
 - **Divide scripts into sections with self-explanatory header titles.** Both the Stata do-file editor and RStudio have built-in features for this.
 - **Add comments to the code**: self-documentation can only go so far. Comments should explain not only *what* you are doing, but *why* you are doing it.
-- **Add metadata on functionality, inputs, outputs and to your code.** The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates.
+- **Add metadata on functionality, inputs, and outputs to your code.** The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates.
 - **Write a project readme and have a system to keep it updated.** Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code.
 
 [Variable names in survey research](https://medium.com/@janschenk/variable-names-in-survey-research-a18429d2d4d8){: .btn .btn-more }
@@ -55,3 +55,17 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 [Example of analysis script header](https://github.com/worldbank/rio-safe-space/blob/6b8907eefb430272100ea8de8db6e5d302ac7e58/Reproducibility%20Package/dofiles/analysis/paper/graphs/beliefs.do#L1-L13){: .btn .btn-more }
 [Template project readme](https://social-science-data-editors.github.io/template_README/){: .btn .btn-more }
 [Example of protocol to update readme](https://github.com/DevInnovationLab/dil-template-repo/blob/main/CONTRIBUTING.md#opening-a-pull-request-from-a-feature-branch-to-develop){: .btn .btn-more }
+
+## Track your changes
+
+You already track changes to Word documents. You should also track changes to your code and data work. **Learn how to use git and start using it as soon as you start writing code**. Even in the unlikely case that you never need to go back and check previous versions of your files, it will still give you the peace of mind of knowing that if you break or erase something important, you can always go back.
+
+There are many version control systems, but some are clearly better than others. Using file names to track changes, for example, is better than not tracking them at all. [But that can get unwieldy very quickly](https://twitter.com/nathanwpyle/status/971595282810130432). [Git](https://git-scm.com/) is the version control system most widely adopted among coders. It allows you to track changes to any plain text files, save incremental changes to your work, and compare different versions. It also creates incentives to document your work through commit messages. When combined with a hosting service like [GitHub](https://github.com/), it creates a workflow for multiple people to collaborate on a project simultaneously without breaking each other's codes, transfer code to different machines, track tasks and write documentation. **We recommend using GitHub to track changes to metadata (through codebooks), tables (by exporting them to plain-text files such as .tex and .csv), and figures as well as code, so you always know how changes in the code are affecting its outputs.** 
+
+[Writing meaningful commit messages](https://reflectoring.io/meaningful-commit-messages/){: .btn .btn-more }
+[Using branches for simultaneous collaboration](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches){: .btn .btn-more }
+[Using GitHub for cloud syncing](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/keeping-your-local-repository-in-sync-with-github/syncing-your-branch){: .btn .btn-more }
+[Using GitHub issues to track tasks](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues){: .btn .btn-more }
+[About GitHub wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis){: .btn .btn-more }
+[Tracking changes to metadata]{: .btn .btn-more }
+[Tracking changes to images](https://github.blog/2011-03-21-behold-image-view-modes/){: .btn .btn-more }
