@@ -69,3 +69,12 @@ There are many version control systems, but some are clearly better than others.
 [About GitHub wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis){: .btn .btn-more }
 [Tracking changes to metadata]{: .btn .btn-more }
 [Tracking changes to images](https://github.blog/2011-03-21-behold-image-view-modes/){: .btn .btn-more }
+
+## Ask questions
+
+Don't spend too much time banging your head against the wall, it is not a good use of your time. If you seek help, chances are you will find that others have had similar challenges and a solution already exists. To save everyone's time, however, you should **learn when, where and how to ask questions**. 
+
+Your first resource should be looking for already existing answers: try pasting error messages on search engines and consulting help files. Answers to most questions can usually be found on Stack Overflow or some other users forum. **If you have spent about 15 minutes trying to find a similar question that has already been answered and did not succeed, then ask colleagues or open a new question on Stack Overflow. In these cases, the quality of the answer you will get tends to be directly proportional to the quality of your question**. Make sure to describe (i) what you would like to do, (ii) what result you are expecting, (iii) what you have already tried that did not work, (iv) the results or error messages you received when trying it, (v) your software version and system details. If possible, provide a reproducible example or mock dataset.
+
+[Writing the perfect question](https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/){: .btn .btn-more }
+[DIL Slack channel for analytics help](){: .btn .btn-internal }
