@@ -5,7 +5,7 @@ parent: Principles of analytics
 ---
 
 
-# Developing code
+# Writing code
 {: .no_toc }
 
 1. TOC
@@ -13,15 +13,14 @@ parent: Principles of analytics
 
 ---
 
-## Principle 1 
+## Choose wisely
 
-Etiam convallis, velit vel posuere sagittis, justo tellus imperdiet enim, sit amet ornare orci nisl in mi. Maecenas vel odio luctus, pretium orci et, sodales neque. Maecenas tincidunt lorem ac nisl auctor, eu tempor diam vestibulum. Aenean nec cursus purus, eu interdum leo. Quisque hendrerit magna mauris, nec sodales mi dapibus sit amet. Suspendisse condimentum eget dui in sodales. Vivamus congue urna nisl, et dignissim ligula vestibulum vel. Nullam consectetur vehicula turpis, eu auctor ipsum porttitor ut. Sed nisl metus, euismod eget quam non, tempus pharetra est. Duis quis tincidunt turpis, et tincidunt massa. Sed sagittis euismod velit non sodales. Nam pharetra enim lacus, vitae sodales nibh finibus id. Mauris viverra eros nibh, consequat congue leo tincidunt vitae. In faucibus iaculis molestie.
+There are pros and cons to all the different statistical software available. At the start of any project, you will need to **make an intentional choice about which software to use**. You may think that you will save time by using the software you are already most familiar with and implementing one or two pieces of analysis that it can't handle on another software. However, this often proves more time-consuming when setting up a complete reproducibility workflow, as you need to conciliate data transferring, versioning, and automation across all the programs used. Instead, **it is best to rely on a single software for all the analytics in a project**. 
 
-Praesent hendrerit id lectus eu accumsan. Donec eget fermentum metus, sollicitudin faucibus elit. Nunc tempor ante accumsan tempus tristique. Donec suscipit erat in dui auctor tincidunt. Donec et tincidunt lacus. Pellentesque eleifend gravida lobortis. Nullam at tincidunt velit, ac tempus leo. Praesent non nulla mauris. Quisque eleifend, urna vitae varius convallis, est arcu sagittis ipsum, id porttitor felis odio id turpis. Nulla facilisi. Nullam sodales lorem sit amet ultrices scelerisque. Cras dapibus massa elit, at efficitur arcu gravida nec.
+**Do some research about which software can handle the most complex analytics processes your project will require**. For example, if you know you need to perform complex spatial operations, you should prefer R or Python to Stata, since they have more developed GIS libraries. If it is not at all possible to use a single software, make sure to have a script that runs all the code from all the different software in the correct order. For example, you can write a single main script that [calls R from Stata](https://github.com/reifjulian/rscript) (or [vice-versa](https://github.com/lbraglia/RStata)), or use more sophisticated tools, such as [makefiles](https://the-turing-way.netlify.app/reproducible-research/make/make-examples.html#makefile-no-1-the-basics). 
 
-## Principle 2
+As soon as you get some data, you will probably want to start exploring it. This is good! But figuring out how to prepare and analyze your data on the fly often results in a patchwork of code that quickly becomes hard to manage. To avoid ending up in this position, **start planning your analytic workflow early on -- ideally before any data is acquired**. (As discussed earlier, setting up the analytics with simulated data will often enable you to do so.) Apart from choosing a software, try to identify in advance which information, tasks, packages, functions, etc., you will require. Identifying procedures that work for a project is a collaborative process. Discuss with other coworkers what you need, agree on an analysis plan, organize the data work on a [data map](https://dimewiki.worldbank.org/Data_Map), and *then* start wrangling the data. 
 
-Duis finibus eu urna non molestie. Morbi placerat, ligula eu volutpat posuere, enim purus porta mi, iaculis condimentum magna ipsum eget nibh. Aenean posuere iaculis mi, at blandit mauris aliquet id. Mauris placerat scelerisque dolor nec fringilla. Morbi et finibus purus. Fusce et lectus et felis malesuada rutrum vel vitae odio. In eu turpis elementum metus scelerisque feugiat at sed mauris. Aenean ultricies nunc enim, in tincidunt sem consectetur et.
 
 [Link button](http://example.com/){: .btn .btn-more }
 
