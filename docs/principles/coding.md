@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Developing code
+title: Writing code
 parent: Principles of analytics
 ---
 

@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 
-Welcome to the Development Innovation Lab's Analytics Guide. This guide is meant to be used by anyone in the Lab who is working with analytics. “Analytics” is a general term that encapsulates processing and managing data, coding, and statistical or mathematical modeling. The principles described here apply whenever these three elements are present, no matter what software you are using. 
+Welcome to the Development Innovation Lab's Analytics Guide. This guide is meant to be used by anyone in the Lab who is working with analytics and wants their work to be transparent and reproducible. "Analytics" is a general term that encapsulates processing and managing data, coding, and statistical or mathematical modeling. The materials contained in this guide are meant to be useful whenever these three elements are present, no matter what software you are using.
 
 ## How to use this guide
 
