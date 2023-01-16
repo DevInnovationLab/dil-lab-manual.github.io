@@ -113,3 +113,9 @@ Learning how to use these tools can be time consuming, but remember that not eve
 [Calling Stata from R](https://github.com/lbraglia/RStata){: .btn .btn-more }{:target="_blank"}
 [Basics of makefiles](https://the-turing-way.netlify.app/reproducible-research/make/make-examples.html#makefile-no-1-the-basics){: .btn .btn-more }{:target="_blank"}
 [Template project README](https://github.com/social-science-data-editors/template_README/blob/release-candidate/templates/README.md#instructions-to-replicators){: .btn .btn-more }{:target="_blank"}
+
+## Test your code continuously
+
+Even small changes can introduce bugs into scripts that were previously working. The best way to prevent issues from snowballing into serious errors is to have a system to continuously test code and catch bugs. A simple practice that can help with this is **running the code from the top regularly to ensure every step in your project is still working**. A more advanced practice is to **write code to test your code**.
+ 
+Two concepts from software development are particularly useful when it comes to best practices in testing code. The first one is [unit testing](https://tuskr.app/learn/unit-testing), that is, checking that each part of a script is not only running without throwing errors, but also consistently producing the desired results. The second is called [defensive programming](https://en.wikipedia.org/wiki/Defensive_programming), or the idea that your code should be able to handle unexpected input. Applications of these concepts to data processing and analysis use cases may not be immediately intuitive. One example is to write code that can detect extreme outliers and handle missing values or text with non-English characters. Another important practice is to test the output of data wrangling operations that often cause errors, for example checking the number of observations in the data after combining or aggregating data sets. 
