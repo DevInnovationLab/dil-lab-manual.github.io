@@ -1,0 +1,80 @@
+$maroon: #80001E !default;
+$maroon-dark: #4e0012 !default;
+$teal-000: #809aa7 !default;
+$teal-100: #6a90a3 !default;
+$teal-200: #004161 !default;
+$teal-300: #023650 !default;
+$yellow-000: #fff5e6 !important;
+$yellow-100: #fddaa3 !important;
+$yellow-200: #faa319 !important;
+$yellow-300: #ca7f07 !important;
+
+.site-header .site-title {
+    color: $maroon;
+    font-weight: 400;
+    font-size: 135% !important;
+}
+
+li.nav-list-item a.nav-list-link {
+    color: $maroon;
+}
+
+.nav-list .nav-list-item .nav-list-expander {
+    color: $maroon;
+}
+
+.breadcrumb-nav-list-item a {
+    color: $maroon;
+}
+
+.breadcrumb-nav-list-item a:hover{
+    text-decoration-color: $maroon;
+}
+
+#markdown-toc a {
+    color: $maroon;
+}
+
+#markdown-toc a:hover {
+    text-decoration-color: $maroon;
+}
+
+.btn-more {
+    background-color: $yellow-200;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+    border-radius: 20px;
+    padding: 0.1em .8em;
+}
+
+.btn-more:hover {
+    background-color: $yellow-300;
+    color: white;
+}
+
+.btn-internal {
+    background-color: $maroon;
+    color: white;
+    font-weight: normal;
+    font-size: 90%;
+    border-radius: 20px;
+    padding: 0.1em .8em;
+}
+
+.btn-internal:hover {
+    background-color: $maroon-dark;
+    color: white;
+}
+
+.search-button .icon {
+    color: rgba($maroon, .6);
+}
+a#search-button :hover {
+    color: $maroon;
+}
+
+::selection { 
+    color: #fff; 
+    background: $maroon; 
+}
