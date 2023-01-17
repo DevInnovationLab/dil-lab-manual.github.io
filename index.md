@@ -15,7 +15,6 @@ It should serve as a standing reference that can be consulted by anyone at the L
 
 1. **Add this website your bookmarks bar** and come back to it whenever you need it.   
 1. **Read the Analytics principles.** These are basic principles to make the use of analytics at DIL more transparent and reproducible. They apply to any activity with data and code, no matter what software is being used. It does not get into a lot of details, but links to plenty of additional resources.
-1. **Consult the data work guides for more detailed instructions of how to approach different tasks**. You don't need to do it right away, but rather come back to it when you are implementing each of the tasks listed.
 1. **Explore additional resources**. These are external links, ad-hoc materials and lab templates.
 
 ## Feedback is welcome
