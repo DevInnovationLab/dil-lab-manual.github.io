@@ -4,7 +4,7 @@ This website uses a Jekyll template. The github.io page is automatically updated
 
 ## Building and previewing your site locally
 
-Assuming [Jekyll] and [Bundler] are installed on your computer:
+Assuming Jekyll and Bundler are installed on your computer:
 
 1.  Change your working directory to the root directory of your site.
 
@@ -16,10 +16,7 @@ Assuming [Jekyll] and [Bundler] are installed on your computer:
 
 ----
 
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
+- Jekyll: https://jekyllrb.com
+- Just the Docs: https://just-the-docs.github.io/just-the-docs/
+- GitHub Pages: https://docs.github.com/en/pages
+- Bundler: https://bundler.io
