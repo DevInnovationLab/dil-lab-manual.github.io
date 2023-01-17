@@ -21,15 +21,40 @@ As soon as you get some data, you will probably want to start exploring it. This
 
 Apart from choosing a software, try to identify in advance which information, tasks, packages, functions, etc., you will require. Identifying procedures that work for a project is a collaborative process. Discuss with other coworkers what you need, agree on an analysis plan, organize the data work on a [data map](https://dimewiki.worldbank.org/Data_Map), and *then* start wrangling the data. 
 
+## Code should live forever
+
+**What does it mean for code to "stay alive"? It means that *any other researcher* can run it *without errors* and obtain *consistent results***. To achieve this, code should be written to endure: plan your analytic workflow having in mind that it may be used again and again. It may seem otherwise, but implementing good practices as soon as you start writing code will save you time. It will also make coding more pleasant!
+
+**A common practice that prevents code from staying alive is requiring a series of manual steps to run the code or re-create outputs**. For example, projects where one needs to open and run different pieces of code in a particular order, where code is typed directly into a software’s console, or where users need to copy-paste inputs from one software to another – copy-pasting from statistical software to word documents being the most common offense. To avoid this issue, make sure your workflow is fully automated.
+
+**Another common practice that hinders endurance is neglecting transferability and creating code that only runs in one computer**. For example, by hard coding file paths or using libraries that are not installed on other machines. Strategies that can help prevent this include:
+
+- *Sharing all the necessary operating system configurations alongside the code through containers*. This is the safest way to guarantee a smooth transfer between computers, but it can also be costly to set up and requires specific software for code to be reused. 
+- *Making it easy to adjust file paths*.
+- *Setting up a system to manage packages and user-written commands*, including the specific versions used. This can be done in Python using virtual environments, in R with the `renv` package, and in Stata by sharing the code for the command versions used. 
+
+[Use of Docker containers for Reproducibility in Economics](https://aeadataeditor.github.io/posts/2021-11-16-docker){: .btn .btn-more }{:target="_blank"}
+[Writing transferrable file paths](https://dimewiki.worldbank.org/File_path){: .btn .btn-more }{:target="_blank"}
+[Python virtual environments](https://realpython.com/python-virtual-environments-a-primer/){: .btn .btn-more }{:target="_blank"}
+[Introduction to renv](https://rstudio.github.io/renv/articles/renv.html){: .btn .btn-more }{:target="_blank"}
+
+## Don't repeat yourself
+
+There are many problems with repetitive code: it takes longer to read, is error-prone, and is hard to maintain. In computer science, the [DRY rule](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) states that **"every piece of knowledge must have a single, unambiguous, authoritative representation within a system"**. A good rule of thumb to implement this rule is that if you have copied and pasted a chunk of code more than twice, it should probably be turned into a *function* or a *loop*. [Abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science)) is the key concept behind this principle: separate inputs that are context-specific from the general processes. The latter can typically be re-used in different contexts, as long as the context-specific inputs are provided. 
+
+Say, for example, that you are running regressions of multiple outcome variables on treatment assignment and a fixed set of controls. You could repeat yourself by writing the code to run one regression for each outcome variable, and list all controls on the code for each of these regressions. Note that the outcome variable is specific to each regression, but the set of controls is stable for the whole project. Given this setup, if you wanted to add or remove a control variable, you would have to edit multiple lines of code. A more efficient way to do this would be to have a single representation of the set of control variables in your code, defining this set of variables in the main script (as a global macro in Stata or an object in R) and referring to it in analysis scripts. By doing this, you will be able to update all regressions by altering a single line in a single script. To go further, you could also loop over outcome variables and write the code for the regressions only once.
+
+An extension of the DRY rule is to not spend time reinventing the wheel. **If you are trying to do something that does not seem easy to implement, spend some time looking for an existing function from reputed sources to do it**. Using canned functions will make your code easier to read and less buggy. Developers usually share their solutions in the form of packages or libraries which include extensive error-handling features that are not thought of when first implementing a task. For example, both R and Stata have commands that allow you to create a balance table with a single line of code, so writing code from scratch to summarize variables, test for differences in means, and organize this information into a table means repeating other people’s work, which is not a great use of your time.
+
 ## Be kind to your reader
 
 Coding is a collaborative process with ourselves and others. Collaboration is only possible if there is a shared understanding between people and, more importantly, [over time](https://twitter.com/commitstrip/status/689153602254974976). Never trust your future self to simply remember what you know today, or [you may become your own worst enemy](http://www.threepanelsoul.com/comic/on-perl). To make things easier for [yourself](https://www.meme-arsenal.com/en/create/meme/4734358), **write your code as if it is going to be read by someone who doesn't have any context about it**. There are a million different ways to make code more readable, but here are a few basic ones:
 
 ### Style
-- **Write short lines.** While different languages have different rules for the ideal script length, almost all style guides recommend not going beyond 80 characters in a line.
-- **Write short, modular scripts.** One rule of thumb is to aim at having no more than 200 lines per file. Another one is that if you are loading data, this should be the start of a new script -- and if you are saving data, this should be the end of the current one.
-- **Use a [style guide](https://xkcd.com/1513/).** For DIL projects, follow the style guides linked in the buttons below.
-- **Use white space and indentation.** Youcanreadandunderstandasentenceevenwithoutspaces. But they sure make it a lot easier. Different languages have different standards for how to use spacing. Check the style guides linked above for recommendations. 
+- *Write short lines.* While different languages have different rules for the ideal script length, almost all style guides recommend not going beyond 80 characters in a line.
+- *Write short, modular scripts.* One rule of thumb is to aim at having no more than 200 lines per file. Another one is that if you are loading data, this should be the start of a new script -- and if you are saving data, this should be the end of the current one.
+- *Use a [style guide](https://xkcd.com/1513/).* For DIL projects, follow the style guides linked in the buttons below.
+- *Use white space and indentation.* Youcanreadandunderstandasentenceevenwithoutspaces. But they sure make it a lot easier. Different languages have different standards for how to use spacing. Check the style guides linked above for recommendations. 
 
 [Modular programming](https://www.tiny.cloud/blog/modular-programming-principle/){: .btn .btn-more }{:target="_blank"}
 [DIME's Stata style guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide){: .btn .btn-more }{:target="_blank"}
@@ -37,12 +62,12 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 [PEP8 - Python style guide](https://peps.python.org/pep-0008/){: .btn .btn-more }{:target="_blank"}
 
 ### Content
-- **Write self-documenting code as much as possible.** Name variables, files, directories, and functions intuitively (e.g., `temp` is a terrible name for both folders and files). We recommend avoiding blank spaces in file and directory names.
-- **Make inputs explicit.**
-- **Divide scripts into sections with self-explanatory header titles.** Both the Stata do-file editor and RStudio have built-in features for this.
-- **Add comments to the code**: self-documentation can only go so far. Comments should explain not only *what* you are doing, but *why* you are doing it.
-- **Add metadata on functionality, inputs, and outputs to your code.** The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates.
-- **Write a project readme and have a system to keep it updated.** Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code.
+- *Write self-documenting code as much as possible.* Name variables, files, directories, and functions intuitively (e.g., `temp` is a terrible name for both folders and files). We recommend avoiding blank spaces in file and directory names.
+- *Make inputs explicit.*
+- *Divide scripts into sections with self-explanatory header titles.* Both the Stata do-file editor and RStudio have built-in features for this.
+- *Add comments to the code*: self-documentation can only go so far. Comments should explain not only *what* you are doing, but *why* you are doing it.
+- *Add metadata on functionality, inputs, and outputs to your code.* The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates.
+- *Write a project readme and have a system to keep it updated.** Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code.
 
 [Variable names in survey research](https://medium.com/@janschenk/variable-names-in-survey-research-a18429d2d4d8){: .btn .btn-more }{:target="_blank"}
 [Naming files](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf){: .btn .btn-more }{:target="_blank"}
@@ -54,31 +79,6 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 [Example of analysis script header](https://github.com/worldbank/rio-safe-space/blob/6b8907eefb430272100ea8de8db6e5d302ac7e58/Reproducibility%20Package/dofiles/analysis/paper/graphs/beliefs.do#L1-L13){: .btn .btn-more }{:target="_blank"}
 [Template project readme](https://social-science-data-editors.github.io/template_README/){: .btn .btn-more }{:target="_blank"}
 [Example of protocol to update readme](https://github.com/DevInnovationLab/dil-template-repo/blob/main/CONTRIBUTING.md#opening-a-pull-request-from-a-feature-branch-to-develop){: .btn .btn-more }{:target="_blank"}
-
-## Code should live forever
-
-What does it mean for code to "stay alive"? It means that *any other researcher* can run it *without errors* and obtain *consistent results*. To achieve this, code should be written to endure: plan your analytic workflow having in mind that it may be used again and again. It may seem otherwise, but implementing good practices as soon as you start writing code will save you time. It will also make coding more pleasant!
-
-**A common practice that prevents code from staying alive is requiring a series of manual steps to run the code or re-create outputs**. For example, projects where one needs to open and run different pieces of code in a particular order, where code is typed directly into a software’s console, or where users need to copy-paste inputs from one software to another – copy-pasting from statistical software to word documents being the most common offense. To avoid this issue, make sure your workflow is fully automated.
-
-**Another common practice that hinders endurance is neglecting transferability and creating code that only runs in one computer**. For example, by hard coding file paths or using libraries that are not installed on other machines. Strategies that can help prevent this include:
-
-- **Sharing all the necessary operating system configurations alongside the code through containers**. This is the safest way to guarantee a smooth transfer between computers, but it can also be costly to set up and requires specific software for code to be reused. 
-- **Making it easy to adjust file paths**.
-- **Setting up a system to manage packages and user-written commands**, including the specific versions used. This can be done in Python using virtual environments, in R with the `renv` package, and in Stata by sharing the code for the command versions used. 
-
-[Use of Docker containers for Reproducibility in Economics](https://aeadataeditor.github.io/posts/2021-11-16-docker){: .btn .btn-more }{:target="_blank"}
-[Writing transferrable file paths](https://dimewiki.worldbank.org/File_path){: .btn .btn-more }{:target="_blank"}
-[Python virtual environments](https://realpython.com/python-virtual-environments-a-primer/){: .btn .btn-more }{:target="_blank"}
-[Introduction to `renv`](https://rstudio.github.io/renv/articles/renv.html){: .btn .btn-more }{:target="_blank"}
-
-## Don't repeat yourself
-
-There are many problems with repetitive code: it takes longer to read, is error-prone, and is hard to maintain. In computer science, the [DRY rule](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) states that **"every piece of knowledge must have a single, unambiguous, authoritative representation within a system"**. A good rule of thumb to implement this rule is that if you have copied and pasted a chunk of code more than twice, it should probably be turned into a *function* or a *loop*. [Abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science) is the key concept behind this principle: separate inputs that are context-specific from the general processes. The latter can typically be re-used in different contexts, as long as the context-specific inputs are provided. 
-
-Say, for example, that you are running regressions of multiple outcome variables on treatment assignment and a fixed set of controls. You could repeat yourself by writing the code to run one regression for each outcome variable, and list all controls on the code for each of these regressions. Note that the outcome variable is specific to each regression, but the set of controls is stable for the whole project. Given this setup, if you wanted to add or remove a control variable, you would have to edit multiple lines of code. A more efficient way to do this would be to have a single representation of the set of control variables in your code, defining this set of variables in the main script (as a global macro in Stata or an object in R) and referring to it in analysis scripts. By doing this, you will be able to update all regressions by altering a single line in a single script. To go further, you could also loop over outcome variables and write the code for the regressions only once.
-
-An extension of the DRY rule is to not spend time reinventing the wheel. **If you are trying to do something that does not seem easy to implement, spend some time looking for an existing function from reputed sources to do it**. Using canned functions will make your code easier to read and less buggy. Developers usually share their solutions in the form of packages or libraries which include extensive error-handling features that are not thought of when first implementing a task. For example, both R and Stata have commands that allow you to create a balance table with a single line of code, so writing code from scratch to summarize variables, test for differences in means, and organize this information into a table means repeating other people’s work, which is not a great use of your time.
 
 ## Track your changes
 
@@ -138,4 +138,4 @@ As with most skills, coding skills need to be maintained. One way to do it is to
 
 Reading help files and cheat sheets is also a great way to learn more about languages you already use. For example, there may be a faster command to do something that always took you a long time, or a function you were already using may have options you didn’t know about. **Cultivate the habit of checking the help file** when using a command – you will be positively surprised by what you can learn. Finally, **many efficiency gains will come from how you use your IDE**, so make sure to learn the shortcuts and workflows for your software of choice.
 
-[RStudio shortcuts](https://appsilon.com/rstudio-shortcuts-and-tips/)
+[RStudio shortcuts](https://appsilon.com/rstudio-shortcuts-and-tips/){: .btn .btn-more }{:target="_blank"}

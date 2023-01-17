@@ -20,4 +20,4 @@ It should serve as a standing reference that can be consulted by anyone at the L
 
 ## Feedback is welcome
 
-If you find any broken links or typos, want to suggest resources to link to, have questions about any of the content or disagree with our recommendations, please share your feedback by crating an [issue](https://github.com/DevInnovationLab/guides/issues) in the [Manual's repository](https://github.com/DevInnovationLab/guides)
+If you find any broken links or typos, want to suggest resources to link to, have questions about any of the content or disagree with our recommendations, please share your feedback by creating an [issue](https://github.com/DevInnovationLab/guides/issues) or making a pull request to the [Manual's repository](https://github.com/DevInnovationLab/guides).
