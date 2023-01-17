@@ -7,7 +7,7 @@ has_children: true
 
 # Principles of analytics
 
-There is one basic idea behind all the principles in this guide: **anyone at any point should be able to understand, use, and scrutinize all the analytics developed at DIL**. This means that for all code that is written to analyze data, it should be easy for other people to (1) understand what the code is doing, (2) run the code, and (3) obtain exactly the same results. More often than not, this person will be a future version of the original code writer.
+There is one basic idea behind all the principles in this guide: **anyone at any point should be able to understand, use, and scrutinize all the analytics developed at DIL**. This means that for all code that is written to analyze data, it should be easy for other people to (1) understand what the code is doing, (2) run the code, and (3) obtain exactly the same results. More often than not, this person will be a future version of the original code writer
 
 Although economists and other social scientists will generally agree that this is a desirable goal, in practice few of us know how to get there. And there is a good reason for it: we may spend a good chunk of our time as a profession doing analytics, but most of us were never trained as programmers, statisticians, or data scientists. As a result, two unfortunate ideas are imprinted on our hive mind. The first one is that analytics is just a hurdle we need to get through to answer a research question. The second is that we don't have enough time to learn and implement best practices.
 
