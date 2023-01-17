@@ -3,7 +3,6 @@ layout: default
 title: Principles of analytics
 nav_order: 2
 has_children: true
-permalink: docs/principles
 ---
 
 # Principles of analytics
