@@ -1,0 +1,392 @@
+{"0": {
+    "doc": "Writing code",
+    "title": "Writing code",
+    "content": ". | Choose wisely | Code should live forever | Don’t repeat yourself | Be kind to your reader . | Style | Content | . | Track your changes | Ask questions | Automate your workflow from the start | Test your code continuously | There’s always more to learn | . ",
+    "url": "/docs/principles/coding.html",
+    "relUrl": "/docs/principles/coding.html"
+  },"1": {
+    "doc": "Writing code",
+    "title": "Choose wisely",
+    "content": "There are pros and cons to all the different statistical software available. At the start of any project, you will need to make an intentional choice about which software to use. You may think that you will save time by using the software you are already most familiar with and implementing one or two pieces of analysis that it can’t handle on another software. However, this often proves more time-consuming when setting up a complete reproducibility workflow, as you need to conciliate data transferring, versioning, and automation across all the programs used. Instead, it is best to rely on a single software for all the analytics in a project. As soon as you get some data, you will probably want to start exploring it. This is good! But figuring out how to prepare and analyze your data on the fly often results in a patchwork of code that quickly becomes hard to manage. To avoid ending up in this position, start planning your analytic workflow early on – ideally before any data is acquired. (As discussed here, setting up the analytics with simulated data will often enable you to do so.) Do some research about which software can handle the most complex analytics processes your project will require. For example, if you know you need to perform complex spatial operations, you should prefer R or Python to Stata, since they have more developed GIS libraries. If it is not at all possible to use a single software, research the options available to automate the cross-software workflow. Apart from choosing a software, try to identify in advance which information, tasks, packages, functions, etc., you will require. Identifying procedures that work for a project is a collaborative process. Discuss with other coworkers what you need, agree on an analysis plan, organize the data work on a data map, and then start wrangling the data. ",
+    "url": "/docs/principles/coding.html#choose-wisely",
+    "relUrl": "/docs/principles/coding.html#choose-wisely"
+  },"2": {
+    "doc": "Writing code",
+    "title": "Code should live forever",
+    "content": "What does it mean for code to “stay alive”? It means that any other researcher can run it without errors and obtain consistent results. To achieve this, code should be written to endure: plan your analytic workflow having in mind that it may be used again and again. It may seem otherwise, but implementing good practices as soon as you start writing code will save you time. It will also make coding more pleasant! . A common practice that prevents code from staying alive is requiring a series of manual steps to run the code or re-create outputs. For example, projects where one needs to open and run different pieces of code in a particular order, where code is typed directly into a software’s console, or where users need to copy-paste inputs from one software to another – copy-pasting from statistical software to word documents being the most common offense. To avoid this issue, make sure your workflow is fully automated. Another common practice that hinders endurance is neglecting transferability and creating code that only runs in one computer. For example, by hard coding file paths or using libraries that are not installed on other machines. Strategies that can help prevent this include: . | Sharing all the necessary operating system configurations alongside the code through containers. This is the safest way to guarantee a smooth transfer between computers, but it can also be costly to set up and requires specific software for code to be reused. | Making it easy to adjust file paths. | Setting up a system to manage packages and user-written commands, including the specific versions used. This can be done in Python using virtual environments, in R with the renv package, and in Stata by sharing the code for the command versions used. | . Use of Docker containers for Reproducibility in Economics Writing transferrable file paths Python virtual environments Introduction to renv . ",
+    "url": "/docs/principles/coding.html#code-should-live-forever",
+    "relUrl": "/docs/principles/coding.html#code-should-live-forever"
+  },"3": {
+    "doc": "Writing code",
+    "title": "Don’t repeat yourself",
+    "content": "There are many problems with repetitive code: it takes longer to read, is error-prone, and is hard to maintain. In computer science, the DRY rule states that “every piece of knowledge must have a single, unambiguous, authoritative representation within a system”. A good rule of thumb to implement this rule is that if you have copied and pasted a chunk of code more than twice, it should probably be turned into a function or a loop. Abstraction is the key concept behind this principle: separate inputs that are context-specific from the general processes. The latter can typically be re-used in different contexts, as long as the context-specific inputs are provided. Say, for example, that you are running regressions of multiple outcome variables on treatment assignment and a fixed set of controls. You could repeat yourself by writing the code to run one regression for each outcome variable, and list all controls on the code for each of these regressions. Note that the outcome variable is specific to each regression, but the set of controls is stable for the whole project. Given this setup, if you wanted to add or remove a control variable, you would have to edit multiple lines of code. A more efficient way to do this would be to have a single representation of the set of control variables in your code, defining this set of variables in the main script (as a global macro in Stata or an object in R) and referring to it in analysis scripts. By doing this, you will be able to update all regressions by altering a single line in a single script. To go further, you could also loop over outcome variables and write the code for the regressions only once. An extension of the DRY rule is to not spend time reinventing the wheel. If you are trying to do something that does not seem easy to implement, spend some time looking for an existing function from reputed sources to do it. Using canned functions will make your code easier to read and less buggy. Developers usually share their solutions in the form of packages or libraries which include extensive error-handling features that are not thought of when first implementing a task. For example, both R and Stata have commands that allow you to create a balance table with a single line of code, so writing code from scratch to summarize variables, test for differences in means, and organize this information into a table means repeating other people’s work, which is not a great use of your time. ",
+    "url": "/docs/principles/coding.html#dont-repeat-yourself",
+    "relUrl": "/docs/principles/coding.html#dont-repeat-yourself"
+  },"4": {
+    "doc": "Writing code",
+    "title": "Be kind to your reader",
+    "content": "Coding is a collaborative process with ourselves and others. Collaboration is only possible if there is a shared understanding between people and, more importantly, over time. Never trust your future self to simply remember what you know today, or you may become your own worst enemy. To make things easier for yourself, write your code as if it is going to be read by someone who doesn’t have any context about it. There are a million different ways to make code more readable, but here are a few basic ones: . ",
+    "url": "/docs/principles/coding.html#be-kind-to-your-reader",
+    "relUrl": "/docs/principles/coding.html#be-kind-to-your-reader"
+  },"5": {
+    "doc": "Writing code",
+    "title": "Style",
+    "content": ". | Write short lines. While different languages have different rules for the ideal script length, almost all style guides recommend not going beyond 80 characters in a line. | Write short, modular scripts. One rule of thumb is to aim at having no more than 200 lines per file. Another one is that if you are loading data, this should be the start of a new script – and if you are saving data, this should be the end of the current one. | Use a style guide. For DIL projects, follow the style guides linked in the buttons below. | Use white space and indentation. Youcanreadandunderstandasentenceevenwithoutspaces. But they sure make it a lot easier. Different languages have different standards for how to use spacing. Check the style guides linked above for recommendations. | . Modular programming DIME’s Stata style guide Tidyverse’s R style guide PEP8 - Python style guide . ",
+    "url": "/docs/principles/coding.html#style",
+    "relUrl": "/docs/principles/coding.html#style"
+  },"6": {
+    "doc": "Writing code",
+    "title": "Content",
+    "content": ". | Write self-documenting code as much as possible. Name variables, files, directories, and functions intuitively (e.g., temp is a terrible name for both folders and files). We recommend avoiding blank spaces in file and directory names. | Make inputs explicit. | Divide scripts into sections with self-explanatory header titles. Both the Stata do-file editor and RStudio have built-in features for this. | Add comments to the code: self-documentation can only go so far. Comments should explain not only what you are doing, but why you are doing it. | Add metadata on functionality, inputs, and outputs to your code. The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates. | *Write a project readme and have a system to keep it updated.** Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code. | . Variable names in survey research Naming files Naming functions Code headers in Stata Code folding and sections in RStudio Function documentation in R Function documentation in Python Example of analysis script header Template project readme Example of protocol to update readme . ",
+    "url": "/docs/principles/coding.html#content",
+    "relUrl": "/docs/principles/coding.html#content"
+  },"7": {
+    "doc": "Writing code",
+    "title": "Track your changes",
+    "content": "You already track changes to Word documents. You should also track changes to your code and data work. Learn how to use git and start using it as soon as you start writing code. Even in the unlikely case that you never need to go back and check previous versions of your files, it will still give you the peace of mind of knowing that if you break or erase something important, you can always go back. There are many version control systems, but some are clearly better than others. Using file names to track changes, for example, is better than not tracking them at all. But that can get unwieldy very quickly. Git is the version control system most widely adopted among coders. It allows you to track changes to any plain text files, save incremental changes to your work, and compare different versions. It also creates incentives to document your work through commit messages. When combined with a hosting service like GitHub, it creates a workflow for multiple people to collaborate on a project simultaneously without breaking each other’s codes, transfer code to different machines, track tasks and write documentation. We recommend using GitHub to track changes to metadata (through codebooks), tables (by exporting them to plain-text files such as .tex and .csv), and figures as well as code, so you always know how changes in the code are affecting its outputs. Writing meaningful commit messages Using branches for simultaneous collaboration Using GitHub for cloud syncing Using GitHub issues to track tasks About GitHub wikis Tracking changes to images . ",
+    "url": "/docs/principles/coding.html#track-your-changes",
+    "relUrl": "/docs/principles/coding.html#track-your-changes"
+  },"8": {
+    "doc": "Writing code",
+    "title": "Ask questions",
+    "content": "Don’t spend too much time banging your head against the wall, it is not a good use of your time. If you seek help, chances are you will find that others have had similar challenges and a solution already exists. To save everyone’s time, however, you should learn when, where and how to ask questions. Your first resource should be looking for already existing answers: try pasting error messages on search engines and consulting help files. Answers to most questions can usually be found on Stack Overflow or some other users forum. If you have spent about 15 minutes trying to find a similar question that has already been answered and did not succeed, then ask colleagues (use DIL’s #_analytics_help Slack channel) or open a new question on Stack Overflow. In these cases, the quality of the answer you will get tends to be directly proportional to the quality of your question. Make sure to describe (i) what you would like to do, (ii) what result you are expecting, (iii) what you have already tried that did not work, (iv) the results or error messages you received when trying it, (v) your software version and system details. If possible, provide a reproducible example or mock dataset. Writing the perfect question . ",
+    "url": "/docs/principles/coding.html#ask-questions",
+    "relUrl": "/docs/principles/coding.html#ask-questions"
+  },"9": {
+    "doc": "Writing code",
+    "title": "Automate your workflow from the start",
+    "content": "We often include manual steps in our workflow, thinking we will only do something once or twice. However, we invariably end up doing it more often than anticipated. It is very likely that before submitting a paper you will need to prepare a reproducibility package – if not because the journal requires it, because you will want someone outside the project team to do at least a computational reproducibility check. Writing code to re-run years of work will be a daunting task. So do yourself a favor and think about an automation workflow at the onset of your analytical work. It will save you a lot of time over the project’s life-cycle. There are two key steps to follow when setting up this workflow: . | Create a main script to run all the other scripts for a project. It is easier to do this for projects that use a single software, but it is also possible to use this script to run one software from another. There are functions to call R and Python from Stata, for example, and vice-versa. In the unlikely case it is not possible to write such a script, consider using a Makefile. If that is also not an option, you should at the very least have a README file that explains exactly how to run the code and in which order. | Automate the importing of code outputs such as tables and figures into final outputs such as papers and presentations. A common practice that breaks the automation principle is to export graphs from statistical software, save them as images, and manually load them into a paper or presentation. This practice dangerously increases the likelihood that images will not be updated in the final document when making last minute changes. Fortunately, there are many tools to automate this step. One option is to use markdown documents in the same statistical software used for data processing and analysis. Another one is to create a Makefile to run not only your statistical code but also to compile any LaTeX documents – making sure that if one exhibit changes, the latest version will be included in the final document. | . Learning how to use these tools can be time consuming, but remember that not everyone involved in a project needs to know all the nitty-gritty of this setup. The key take-away is to know what you should aim for and where to ask for help when it’s time to put it into practice. Quarto: dynamic documents in Python, R, Julia, and Observable LaTeX manual Template main.R Template main.do Calling R from Stata Calling Stata from R Basics of makefiles Template project README . ",
+    "url": "/docs/principles/coding.html#automate-your-workflow-from-the-start",
+    "relUrl": "/docs/principles/coding.html#automate-your-workflow-from-the-start"
+  },"10": {
+    "doc": "Writing code",
+    "title": "Test your code continuously",
+    "content": "Even small changes can introduce bugs into scripts that were previously working. The best way to prevent issues from snowballing into serious errors is to have a system to continuously test code and catch bugs. A simple practice that can help with this is running the code from the top regularly to ensure every step in your project is still working. A more advanced practice is to write code to test your code. Two concepts from software development are particularly useful when it comes to best practices in testing code. The first one is unit testing, that is, checking that each part of a script is not only running without throwing errors, but also consistently producing the desired results. The second is called defensive programming, or the idea that your code should be able to handle unexpected input. Applications of these concepts to data processing and analysis use cases may not be immediately intuitive. One example is to write code that can detect extreme outliers and handle missing values or text with non-English characters. Another important practice is to test the output of data wrangling operations that often cause errors, for example checking the number of observations in the data after combining or aggregating data sets. ",
+    "url": "/docs/principles/coding.html#test-your-code-continuously",
+    "relUrl": "/docs/principles/coding.html#test-your-code-continuously"
+  },"11": {
+    "doc": "Writing code",
+    "title": "There’s always more to learn",
+    "content": "As with most skills, coding skills need to be maintained. One way to do it is to read other people’s code and have them read yours. If we often ask others to review our emails before we send them, how come we don’t ask them to read our code before presenting its results? If you don’t have people you can go to, you can still review your own code. In both cases, asking the following questions when reading a piece of code will help you improve it: . | What can go wrong in this code? | Does this code make sense? Can it be simpler? Can it be made more efficient? | Should this code chunk be a function? Or maybe an external file used as a function input? | What happens if more observations are added to the data? And if some are removed? | How many lines of code would I have to update if a research decision changed? | . Reading help files and cheat sheets is also a great way to learn more about languages you already use. For example, there may be a faster command to do something that always took you a long time, or a function you were already using may have options you didn’t know about. Cultivate the habit of checking the help file when using a command – you will be positively surprised by what you can learn. Finally, many efficiency gains will come from how you use your IDE, so make sure to learn the shortcuts and workflows for your software of choice. RStudio shortcuts . ",
+    "url": "/docs/principles/coding.html#theres-always-more-to-learn",
+    "relUrl": "/docs/principles/coding.html#theres-always-more-to-learn"
+  },"12": {
+    "doc": "Data dictionary",
+    "title": "Auto dataset",
+    "content": " ",
+    "url": "/docs/templates/data-readme.html#auto-dataset",
+    "relUrl": "/docs/templates/data-readme.html#auto-dataset"
+  },"13": {
+    "doc": "Data dictionary",
+    "title": "Summary",
+    "content": ". | File name : C:/Program Files/Stata17/ado/base/a/auto.dta | File size : 15 KB | Description : 1978 automobile data | Source : Stata Corp | Unit of observation : Automobile make and model | Key : make | Number of observations : 74 | Related code : created by code/import/import-auto.do, used by code/analysis/summary-stats.do | Data collection frequency : | Data collection period : 1978 | Geographic coverage : United States | Languages : English | Weights : | Description of methods for data collection or generation: . | Data provider’s original documentation | Field manual | Survey instrument | Questionnaire form | Field notes | Quality assurance protocols | Sampling design and procedure | . | . ",
+    "url": "/docs/templates/data-readme.html#summary",
+    "relUrl": "/docs/templates/data-readme.html#summary"
+  },"14": {
+    "doc": "Data dictionary",
+    "title": "Variable dictionary",
+    "content": "If the dataset has too many variables, include only the main ones below . | Name | Description | Type | Unit | Categories | . | make | Make and model | Text |   |   | . | price | Price | Continuous | US Dollars |   | . | mpg | Mileage (mpg) | Continuous | Miles per gallon |   | . | rep78 | Repair record 1978 | Continuous |   |   | . | headroom | Headroom (in.) | Continuous | Inches |   | . | trunk | Trunk space (cu. ft.) | Continuous | Cubic feet |   | . | weight | Weight (lbs.) | Continuous | Pounds |   | . | length | Length (in.) | Continuous | Inches |   | . | turn | Turn circle (ft.) | Continuous | Feet |   | . | displacement | Displacement (cu. in.) | Continuous | Cubic inches |   | . | gear_ratio | Gear ratio | Continuous |   |   | . | foreign | Car origin | Binary |   | 0 Domestic 1 Foreign | . ",
+    "url": "/docs/templates/data-readme.html#variable-dictionary",
+    "relUrl": "/docs/templates/data-readme.html#variable-dictionary"
+  },"15": {
+    "doc": "Data dictionary",
+    "title": "Data dictionary",
+    "content": " ",
+    "url": "/docs/templates/data-readme.html",
+    "relUrl": "/docs/templates/data-readme.html"
+  },"16": {
+    "doc": "Working with data",
+    "title": "Working with data",
+    "content": ". | Touch whatever you want… | …and please don’t move anything | Show, don’t (just) tell | Start simple | Create good data sets | Be mindful of sensitive data | . ",
+    "url": "/docs/principles/data.html",
+    "relUrl": "/docs/principles/data.html"
+  },"17": {
+    "doc": "Working with data",
+    "title": "Touch whatever you want…",
+    "content": "Some researchers find it easy to write a lot of statistical modeling code while ignoring the underlying input data. The data is a key ingredient of research, so don’t treat it as something distant and abstract. The only way to really get to know it is by looking at, handling, and probing it. While sometimes it is necessary to blind yourself to parts of data that you analyze to avoid bias, if you are not in that situation then as a default you should take an attitude of working directly with the data. Browse and explore the data to understand how variables are distributed, identify patterns, and spot problems. Do this before you start running regressions or specifying other models which will add more layers of abstraction between you and your data. Knowing the data well will make it easier to interpret and understand the results of more elaborate analysis. Some useful first steps when looking at data include . | confirming the unit of observation, | creating summary statistics tables and distribution graphs, | inspecting outliers, and | investigating missing values. | . By doing this you will often be able to spot potential irregularities in your inputs (indicating problems with data or a need to tweak your modeling approach), hypothesize data generating process (more on which below), and get a feeling for how to generalize from the present data into new contexts in the future. R packages for exploratory data analysis . ",
+    "url": "/docs/principles/data.html#touch-whatever-you-want",
+    "relUrl": "/docs/principles/data.html#touch-whatever-you-want"
+  },"18": {
+    "doc": "Working with data",
+    "title": "…and please don’t move anything",
+    "content": "The above principle of being comfortable touching data comes with an important qualifier: as a general rule, data should never be modified directly, regardless of the format it comes in, and changing data sets through any spreadsheet application should be completely avoided. Instead, it should be modified through code and changes should be saved in derived data sets. This will make data processing more transparent and reproducible. This principle results in a hard rule for the storage of raw data: because it cannot be easily recreated, it should always be kept intact. To avoid overwriting raw data, store it in a separate folder from derived datasets. In the (extremely rare) case a file is saved in a format that cannot be edited through code, make as few changes manually as possible, document all of them, and remember to save the modified version in a separate folder with a different name. A better solution is to save a version of the same data in a more accessible format as early as possible in your workflow and start treating this new file as the raw data. For example, you may download data from a website in such a format that makes analyzing it with statistical software very difficult. Instead of opening it in Excel, making changes to it, and replacing the file, you should: (i) save the data as it was originally downloaded, (ii) load it in statistical software and write code making the desired changes, (iii) save the derived dataset in a separate folder from the original one. This will allow you and other people to tell which dataset was created by you and which one comes from an external source. It will also guarantee that even if the website goes offline, you still have access to the original data. Finally, it will create a record of what modifications were made to the original dataset. DIL data folder structure . ",
+    "url": "/docs/principles/data.html#and-please-dont-move-anything",
+    "relUrl": "/docs/principles/data.html#and-please-dont-move-anything"
+  },"19": {
+    "doc": "Working with data",
+    "title": "Show, don’t (just) tell",
+    "content": "Data speaks for itself. Since researchers learn about the data by touching it, it is important to allow consumers of the research to have a similar experience. This will typically help them understand the data being used and modeling assumptions. While all researchers make sure to tell their readers what methods were used to analyse data, it is less common to also show the inputs into models. As a minimum, you should summarize analyzed data in tables and plot variables that are most important to the analysis. In addition, try to show a glimpse of the input data (a few rows of input into the model) in presentations or papers, especially if introducing new modeling methods or using atypical data structures. Often one look at “raw” inputs will immediately help the reader understand the “shape” of data (e.g. distributions of variables) and notational conventions you use. You can use either a snippet of the real anonymized dataset or a simulated dataset which best represents the real data. When preparing outputs, it’s important to know who your audience is. Who you are presenting information to should determine how to share it. While some information can simply be shared over an email, donors and policy-makers will often expect a polished, stand-alone PDF. Conversely, notebooks are a great way to share both outputs and code for other researchers to review. Whichever of these formats you choose, you will still need to decide whether a graph or a table are the best way to communicate different results and pieces of information in the data. Before creating a table, ask yourself whether the information would be better presented as a graph – and vice-versa. Exposure to good examples will make it easier for you to identify cases where understanding a message is difficult. So take note when you find either. Presenting polished plots is key for any publication. They will typically be a reader’s first interaction with the publication’s results, and therefore are an important aspect of how its message is communicated. However, creating good visual representations of data can be difficult, and it is a learned skill. The resulting urge to neglect the fine-tuning of plots is only human, but at least one person in any project team will need to take the time to learn the details of polishing graphical data. This includes being able to modify characteristics of plots and tables such as dimensions, resolutions, and fonts, as well as rendering and exporting to different formats (including TeX, Word, PPT and also PDF/EPS). Make sure you identify the person on your team who can do this in the lead up to producing results. Table vs graph Internal – DIL templates for papers, memos, presentations and reports . ",
+    "url": "/docs/principles/data.html#show-dont-just-tell",
+    "relUrl": "/docs/principles/data.html#show-dont-just-tell"
+  },"20": {
+    "doc": "Working with data",
+    "title": "Start simple",
+    "content": "Statistics is hard by itself, but simple models can take you very far. Economists know this better than other empiricists but still have a tendency to dote on complicated models. To avoid overcomplicating, start simple: when first interacting with your data constrain the methods that are initially allowed and create a minimum viable product before adding bells and whistles. Simplicity can be a feature, not a bug. How this looks in practice will depend on how exploratory you are in your approach. However, it always makes sense to build your model in stages of increasing complexity, even if you’re not planning to report on the intermediate steps (e.g. because you commited to your modeling choices by using a pre-analysis plan, which is a good thing). Examples include running a linear regression before more complicated methods, including only a few variables at a time, or running your model on 10% of the data first (especially if you have large dataset). When doing things in stages, you should not be concerned with obtaining “publishable” results: you want to do this because it will often help catch problems with data, coding, or even your chosen methods. A more ambitious but extremely useful approach to building models gradually is to work with fake data. This is particularly apt when we are blinded to part of the data. We do this by assuming some “data generating process” (DGP), which is a function that generates datasets (typically with some noise!) and then programming your analytics to work with your DGP outputs. This approach has many advantages, including . | testing performance of your methods (e.g., bias, precision, statistical power) | being able to program your analysis without waiting for data | checking your understanding of how your chosen statistical methods work “under the hood” | . In cases where you know something about the problem, you can code a DGP without first looking at the data. Typically, however, you will use some existing data to design your DGP. For example, if studying an intervention meant to reduce child mortality in a country, you can typically find census data with geographical and temporal variation for that country. This information will allow you to simulate a realistic data structure (via resampling, adding noise, or just visually checking that your DGP matches census data) against which you can test your methods. Note as well that programming a DGP first will often help you spot problems in data from your research project. In our example, suppose the project-collected data for an indicator has a distribution which does not resemble that of the same indicator on the census (e.g., it has much higher mean or much lower variation). Then you may need to ask yourself if this indicator is defined consistently with other data sources, in what way your sample is representative, or hypothesise some necessary model adjustments. ",
+    "url": "/docs/principles/data.html#start-simple",
+    "relUrl": "/docs/principles/data.html#start-simple"
+  },"21": {
+    "doc": "Working with data",
+    "title": "Create good data sets",
+    "content": "Regardless of whether you start from the most complicated models or build them gradually and of whether you start by working on your project’s data directly or using fake datasets, early on in every empirical study you will need to define how to format and store inputs. You should choose a format that makes it convenient to summarize and plot data, run models, and eventually report on results. As Hadley Wickham put it, “tidy datasets are all alike, but every messy dataset is messy in its own way”. Good data sets should be as intuitive and easy to use as possible. To make you are creating data sets that will be easy for you and other people to use, keep your data in a tidy (normalized) format as much as possible, make sure all your data sets have clearly labeled keys, and maintain documentation describing your data sets at every stage of data transformation. Basic data documentation should include a codebook with information on each variable and metadata on the entire dataset, including (i) file name (with file extension), (ii) a short description of the information contained in the data, (iii) the data source, (iv) the unit of observation and the name of the key that identifies it in the data, (v) information about the frequency of data collection, (vi) information about the dates/period covered by the data. A template documentation file can be found here. It often happens that analysis datasets are supplied by outside collaborators. In such cases, you may not have access to the underlying raw data, or it may be too time consuming to reconstruct the dataset from scratch. In these situations, we recommend that you consider these datasets your raw data, even if they have already been pre-processed. That means you should go through the same steps to check data quality, explore, document, and, if needed, wrangle the data as you would for any raw dataset. Follow up with the data provider to clarify any points that are unclear, and document any issues you find, even if you don’t know what caused them or how they can be addressed. Hadley Wickham’s “Tidy data” paper “Tidy data” chapter in R for Data Science Data set keys Template data documentation . ",
+    "url": "/docs/principles/data.html#create-good-data-sets",
+    "relUrl": "/docs/principles/data.html#create-good-data-sets"
+  },"22": {
+    "doc": "Working with data",
+    "title": "Be mindful of sensitive data",
+    "content": "Researchers have a responsibility to protect all human subjects participating in their studies. Make sure to familiarize yourself with and implement all of the data privacy and security guidelines at your institution. Regardless of institution-specific guidelines, most of us already have the habit of removing sensitive information from datasets as soon as possible in our workflow and keeping it encrypted even if that means it will take longer to access the files when needed. Nevertheless, one important practice that may slip our minds is to never include confidential information in code, documentation and other files that may be shared in the future or do not follow the same secure storage protocols as the raw data. For example, if you are writing code to correct information about one particular person in your data, make sure to use an anonymous key variable instead of including their names on the code. And if the only way to identify that person is through their name, save the input file containing the name in an encrypted folder to be loaded by the code instead of writing it directly on the script. AEA Data Editor on coding for confidential data R package for statistical disclosure control Internal – UChicago Sensitive Data Usage Guide . ",
+    "url": "/docs/principles/data.html#be-mindful-of-sensitive-data",
+    "relUrl": "/docs/principles/data.html#be-mindful-of-sensitive-data"
+  },"23": {
+    "doc": "Git",
+    "title": "Git Resources",
+    "content": ". | Git and GitHub learning resources: learning material provided by GitHub | Alice Bartlett’s Git for humans: a short slidedeck explaining the main git concepts in an accessible language | . ",
+    "url": "/docs/resources/git.html#git-resources",
+    "relUrl": "/docs/resources/git.html#git-resources"
+  },"24": {
+    "doc": "Git",
+    "title": "Git",
+    "content": " ",
+    "url": "/docs/resources/git.html",
+    "relUrl": "/docs/resources/git.html"
+  },"25": {
+    "doc": "Home",
+    "title": "Welcome to the Development Innovation Lab’s Analytics Manual",
+    "content": "This guide is meant to be used by anyone in the Lab who is working with analytics. “Analytics” is a general term that encapsulates processing and managing data, coding, and statistical or mathematical modeling. The materials contained in this guide are meant to be useful whenever these three elements are present, no matter what software you are using. ",
+    "url": "/#welcome-to-the-development-innovation-labs-analytics-manual",
+    "relUrl": "/#welcome-to-the-development-innovation-labs-analytics-manual"
+  },"26": {
+    "doc": "Home",
+    "title": "How to use this manual",
+    "content": "It should serve as a standing reference that can be consulted by anyone at the Lab. If you are visiting it for the first time, here is what we recommend: . | Add this website your bookmarks bar and come back to it whenever you need it. | Read the Analytics principles. These are basic principles to make the use of analytics at DIL more transparent and reproducible. They apply to any activity with data and code, no matter what software is being used. It does not get into a lot of details, but links to plenty of additional resources. | Consult the data work guides for more detailed instructions of how to approach different tasks. You don’t need to do it right away, but rather come back to it when you are implementing each of the tasks listed. | Explore additional resources. These are external links, ad-hoc materials and lab templates. | . ",
+    "url": "/#how-to-use-this-manual",
+    "relUrl": "/#how-to-use-this-manual"
+  },"27": {
+    "doc": "Home",
+    "title": "Feedback is welcome",
+    "content": "If you find any broken links or typos, want to suggest resources to link to, have questions about any of the content or disagree with our recommendations, please share your feedback by creating an issue or making a pull request to the Manual’s repository. ",
+    "url": "/#feedback-is-welcome",
+    "relUrl": "/#feedback-is-welcome"
+  },"28": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    "relUrl": "/"
+  },"29": {
+    "doc": "Paper submission checklist",
+    "title": "Paper submission checklist",
+    "content": " ",
+    "url": "/docs/templates/paper-submission.html",
+    "relUrl": "/docs/templates/paper-submission.html"
+  },"30": {
+    "doc": "Paper submission checklist",
+    "title": "Proof-read the text",
+    "content": ". | All results mentioned in the text are shown in an exhibit (table or figure). If that is not the case, make sure this is intentional and no matching exhibit should be included. | The value of all results mentioned in the text match the values in the corresponding exhibit (if one is referenced). | All claims in the texts are substantiated: . | Create a separate doc and paste in each factual claim. | For each claim, check that it is worded accurately and precisely. | For each claim, find evidence. | For most claims add a reference (see below how to check references). Claims which could be considered ‘general knowledge’ may not need to be cited. | . | Abstract and introduction include a summary of results. | Introduction and literature review take no more than five double-spaced pages (or there is a good reason why this is not the case. | The data is described in the paper, including provenance, number of observations and descriptive statistics. | If any data was dropped, the criteria to do so are clearly described. | . | Identification strategy is described in a manner that is intelligible to a non-economist. | Empirical procedures are described in enough detail that someone could replicate the work. | All words are spelled correctly (particularly names and foreign words). | No sentences are unfinished and all comments have been removed. | Names are used consistently throughout the text (for example, the same round of data collection is not referred to as both “midline” and “follow-up 1”; not referring to the same characterist as “gender” and “sex” in different places). | Voice and person are used consistently throughout the text (royal we vs passive voice). | Quotation marks are displayed properly (particularly when using LaTeX). | Use of empty adjectives and adverbs is minimal. | Word choice and sentence construction are not unnecessarily complex. | All text inside tables was also checked. | Someone outside the team has also proof-read the text. | . ",
+    "url": "/docs/templates/paper-submission.html#proof-read-the-text",
+    "relUrl": "/docs/templates/paper-submission.html#proof-read-the-text"
+  },"31": {
+    "doc": "Paper submission checklist",
+    "title": "Check journal guidelines",
+    "content": ". | Look at the guidelines for the journal you are submitting to. They usually have a style file that you can plug into LaTeX. | Check if there is a word count or character limit. | Make sure the references follow the citation style indicated by the journal. | Follow the journal’s guidelines for captioning, titling, and formatting exhibits. | Check if the journal requires any additional documentation, such as CONSORT diagram, data deposit, IRB details, etc. | Check guidelines on abstract, required sections, and section ordering. | Include the required number of keywords . | Check if the journal requires a list of JEL codes to be included. | Check the file formats required for the main manuscript (tex, PDF, Word). | Check if there are specific requirements for exhibits (such as file format and resolution). | Check guidelines for disclosure, funding, and conflict of interest statements. | . More on citation styles JEL classification system . ",
+    "url": "/docs/templates/paper-submission.html#check-journal-guidelines",
+    "relUrl": "/docs/templates/paper-submission.html#check-journal-guidelines"
+  },"32": {
+    "doc": "Paper submission checklist",
+    "title": "Review results and summary statistics tables",
+    "content": ". | All columns and rows clearly labeled. | Labels are understandable to someone unfamiliar with the project. | It is clear how values should be interpreted (for example, it is clear whether a higher value for an index is desirable or not). | . | There are no unintentional line breaks and no text is cut-off. | Formatting is consistent across all tables. | The number of decimal cases shown makes sense for all the values displayed. | Values in the table are consistent with the content they represent (for example, dummy/categorical variables should only take values between zero and one, variables like income and age should never be negative). | Table titles are self-explanatory. | All tables include basic information such as sample size and R*. | The table notes contain all the necessary information for it to be understood as a self-standing exhibit, including . | Variable definitions describing level of winsorization, imputation, definition of indexes, logs, etc. | Sample description (and explanation of why the number of observations is different across columns if that is the case). | Description of symbols used to indicate different levels of significance. | Description of how missing values and zeros are treated. | . | . ",
+    "url": "/docs/templates/paper-submission.html#review-results-and-summary-statistics-tables",
+    "relUrl": "/docs/templates/paper-submission.html#review-results-and-summary-statistics-tables"
+  },"33": {
+    "doc": "Paper submission checklist",
+    "title": "Regression tables",
+    "content": ". | The magnitude of effects is clear (consider adding the sample or control mean). | Test results for any conclusions mentioned in the text are included (such as equality between coefficients and significance of effects in subgroups). | Only interpretable coefficients are shown (for example, for regressions with fixed effects, the constant is not included). | Tables show standard errors rather than t-statistics. | Methods used to calculate standard errors are described in the table notes. | Control variables or fixed effects used are shown in the table or described in the botes. | Weighting method used is described in the notes. | The estimation procedure used is clearly indicated in the table, title or notes (e.g. OLS, probit, logit). | . More on reviewing regression outputs . ",
+    "url": "/docs/templates/paper-submission.html#regression-tables",
+    "relUrl": "/docs/templates/paper-submission.html#regression-tables"
+  },"34": {
+    "doc": "Paper submission checklist",
+    "title": "Review graphs and figures",
+    "content": ". | All axes are clearly labeled. | All the units in the graph are clearly defined. | Axes units match the data. | No information that is distracting or unnecessary to the graph’s message in present. | Color distinction will be visible if printed in black and white. | Color distinction is not affected by color blindness. | Resolution is high enough for printing. | Graph notes include all the necessary information for it to be understood as a self-standing exhibit | Harmonize decimal places (if present) across all graphs/ figures | Make sure image sizes are consistent. | . Chrome extension to simulate color blindness . ",
+    "url": "/docs/templates/paper-submission.html#review-graphs-and-figures",
+    "relUrl": "/docs/templates/paper-submission.html#review-graphs-and-figures"
+  },"35": {
+    "doc": "Paper submission checklist",
+    "title": "Check author’s names and affiliation",
+    "content": ". | All names are spelled correctly. | Affiliation is up to date. | A corresponding author has been indicated. | The email for the corresponding author is up to date. | . ",
+    "url": "/docs/templates/paper-submission.html#check-authors-names-and-affiliation",
+    "relUrl": "/docs/templates/paper-submission.html#check-authors-names-and-affiliation"
+  },"36": {
+    "doc": "Paper submission checklist",
+    "title": "Check numbering of sections and exhibits (tables and graphs)",
+    "content": ". | All exhibits are numbered and cited in numeric sequence. | All exhibits present in the paper are referenced in the text. | Appendices are numbered differently from core sections. | . ",
+    "url": "/docs/templates/paper-submission.html#check-numbering-of-sections-and-exhibits-tables-and-graphs",
+    "relUrl": "/docs/templates/paper-submission.html#check-numbering-of-sections-and-exhibits-tables-and-graphs"
+  },"37": {
+    "doc": "Paper submission checklist",
+    "title": "Check bibliography",
+    "content": ". | All references cited in the text, tables and notes are included in the bibliography. | All references listed in the bibliography are cited in the paper. | If using a numbered citation style, all references are numbered in the same order as they are cited in the text. | . Reference management software: Zotero . ",
+    "url": "/docs/templates/paper-submission.html#check-bibliography",
+    "relUrl": "/docs/templates/paper-submission.html#check-bibliography"
+  },"38": {
+    "doc": "Principles of analytics",
+    "title": "Principles of analytics",
+    "content": "There is one basic idea behind all the principles in this guide: anyone at any point should be able to understand, use, and scrutinize all the analytics developed at DIL. This means that for all code that is written to analyze data, it should be easy for other people to (1) understand what the code is doing, (2) run the code, and (3) obtain exactly the same results. More often than not, this person will be a future version of the original code writer. Although economists and other social scientists will generally agree that this is a desirable goal, in practice few of us know how to get there. And there is a good reason for it: we may spend a good chunk of our time as a profession doing analytics, but most of us were never trained as programmers, statisticians, or data scientists. As a result, two unfortunate ideas are imprinted on our hive mind. The first one is that analytics is just a hurdle we need to get through to answer a research question. The second is that we don’t have enough time to learn and implement best practices. These beliefs, however, are far from true. First of all, good analytics are just as important for credible research as interesting questions and sound methods. Using bad data or using data badly means giving bad answers. Plus, spending some time learning how to best implement your analysis is a guaranteed investment. It will spare you from trying to reinvent the wheel and from falling into well-known traps. That is not to say that as a lab member involved in analytics you have to enjoy writing code or getting your hands dirty with data. A good analytical workflow (by which we mean your system for processing and analyzing data that eventually leads to publishable, reliable, and reproducible results) allows researchers to collaborate with others in ways that play to their strengths and weaknesses. Therefore in building your workflows you should be realistic about your weak as well as strong sides so you can continue enjoying the work that you do. However, to do good research it is essential for every researcher to be able to differentiate between good and bad analytics. No matter what stage of your career you are at, chances are you will continue working with data for a long time. So use this guide as an invitation to start thinking about how to create an analytic workflow that works for you. In the long haul, this will ensure you have more time and peace of mind to focus on the most important and productive aspects of your research. The focus of this guide is on compiling and motivating overarching principles. Its objective is not to teach you how to implement every single principle, but rather to ensure that you can identify the occasions when they should be applied and know where to find help to do so. As such, it may skip some details and point to more comprehensive and practical resources instead. Click through the links to see examples, applications, and more in-depth discussions. ",
+    "url": "/docs/principles",
+    "relUrl": "/docs/principles"
+  },"39": {
+    "doc": "Python",
+    "title": "Python resources",
+    "content": " ",
+    "url": "/docs/resources/py.html#python-resources",
+    "relUrl": "/docs/resources/py.html#python-resources"
+  },"40": {
+    "doc": "Python",
+    "title": "Learning resources",
+    "content": ". | Python Virtual Environments: A Primer | Sebastian Hohmann’s GIS course | . ",
+    "url": "/docs/resources/py.html#learning-resources",
+    "relUrl": "/docs/resources/py.html#learning-resources"
+  },"41": {
+    "doc": "Python",
+    "title": "Consultation materials",
+    "content": ". | PEP8 Style Guide | Conda cheatsheet | . ",
+    "url": "/docs/resources/py.html#consultation-materials",
+    "relUrl": "/docs/resources/py.html#consultation-materials"
+  },"42": {
+    "doc": "Python",
+    "title": "Sample code",
+    "content": ". | Mostly harmless replication repository | . ",
+    "url": "/docs/resources/py.html#sample-code",
+    "relUrl": "/docs/resources/py.html#sample-code"
+  },"43": {
+    "doc": "Python",
+    "title": "Python",
+    "content": " ",
+    "url": "/docs/resources/py.html",
+    "relUrl": "/docs/resources/py.html"
+  },"44": {
+    "doc": "R",
+    "title": "R resources",
+    "content": " ",
+    "url": "/docs/resources/r.html#r-resources",
+    "relUrl": "/docs/resources/r.html#r-resources"
+  },"45": {
+    "doc": "R",
+    "title": "Books",
+    "content": ". | R for Data Science: introductory textbook by RStudio’s Chief Scientist, Hadley Wickham | Geocomputation with R: introductory textbook for geospatial analysis in R | Spatial Data Science: more advanced textbook for geospatial analysis in R, with a heavier focus on methods | . ",
+    "url": "/docs/resources/r.html#books",
+    "relUrl": "/docs/resources/r.html#books"
+  },"46": {
+    "doc": "R",
+    "title": "Courses",
+    "content": ". | DIME’s R for Stata Users: introduction to R language using common empirical research tasks. Requires some knowledge of coding (though not necessarily in Stata) | . ",
+    "url": "/docs/resources/r.html#courses",
+    "relUrl": "/docs/resources/r.html#courses"
+  },"47": {
+    "doc": "R",
+    "title": "Community",
+    "content": ". | R for Data Science Slack: slack workspace for the R4DS community | Tidy Tuesday: weekly R community activity to share data visualizations and the code to create them | . ",
+    "url": "/docs/resources/r.html#community",
+    "relUrl": "/docs/resources/r.html#community"
+  },"48": {
+    "doc": "R",
+    "title": "Consultation materials",
+    "content": ". | List of R packages for difference-in-differences estimation: includes sample codes and links to package documentation and original paper | RStudio cheatsheets | RStudio IDE shortcuts and tips | Tidyverse Style Guide | . ",
+    "url": "/docs/resources/r.html#consultation-materials",
+    "relUrl": "/docs/resources/r.html#consultation-materials"
+  },"49": {
+    "doc": "R",
+    "title": "Sample code",
+    "content": ". | Mostly harmless replication repository | R main script example | . ",
+    "url": "/docs/resources/r.html#sample-code",
+    "relUrl": "/docs/resources/r.html#sample-code"
+  },"50": {
+    "doc": "R",
+    "title": "Useful packages",
+    "content": ". | repex | DeclareDesign: suite of packages to simulate data, randomize treatment assignment and sampling, describe research design and conduct linear estimations | fixest: functions to perform estimations with multiple fixed-effects | . ",
+    "url": "/docs/resources/r.html#useful-packages",
+    "relUrl": "/docs/resources/r.html#useful-packages"
+  },"51": {
+    "doc": "R",
+    "title": "R",
+    "content": " ",
+    "url": "/docs/resources/r.html",
+    "relUrl": "/docs/resources/r.html"
+  },"52": {
+    "doc": "External resources",
+    "title": "External resources",
+    "content": " ",
+    "url": "/docs/resources",
+    "relUrl": "/docs/resources"
+  },"53": {
+    "doc": "Stata",
+    "title": "Stata resources",
+    "content": " ",
+    "url": "/docs/resources/stata.html#stata-resources",
+    "relUrl": "/docs/resources/stata.html#stata-resources"
+  },"54": {
+    "doc": "Stata",
+    "title": "Courses",
+    "content": ". | DIME’s Stata Training | . ",
+    "url": "/docs/resources/stata.html#courses",
+    "relUrl": "/docs/resources/stata.html#courses"
+  },"55": {
+    "doc": "Stata",
+    "title": "Consultation materials",
+    "content": ". | Daniel Feenberg’s Stata for very large datasets | DIME Analytics Stata Style Guide | List of Stata packages for difference-in-differences estimation: includes sample codes and links to package documentation and original paper | Stata cheatsheets | . ",
+    "url": "/docs/resources/stata.html#consultation-materials",
+    "relUrl": "/docs/resources/stata.html#consultation-materials"
+  },"56": {
+    "doc": "Stata",
+    "title": "Sample code",
+    "content": ". | Mostly harmless replication repository | Stata main script example | . ",
+    "url": "/docs/resources/stata.html#sample-code",
+    "relUrl": "/docs/resources/stata.html#sample-code"
+  },"57": {
+    "doc": "Stata",
+    "title": "Useful packages",
+    "content": ". | gtools: “faster Stata for big data” – uses C to create faster versions of functions like reshape, collapse, isid, egen, levelsof, duplicates, and unique/distinct. | IPA’s high-frequency checks template | IPA GitHub repositories: functions for Survey CTO and Stata | . ",
+    "url": "/docs/resources/stata.html#useful-packages",
+    "relUrl": "/docs/resources/stata.html#useful-packages"
+  },"58": {
+    "doc": "Stata",
+    "title": "Stata",
+    "content": " ",
+    "url": "/docs/resources/stata.html",
+    "relUrl": "/docs/resources/stata.html"
+  },"59": {
+    "doc": "DIL templates",
+    "title": "DIL templates",
+    "content": " ",
+    "url": "/docs/templates/templates.html",
+    "relUrl": "/docs/templates/templates.html"
+  },"60": {
+    "doc": "Data visualization",
+    "title": "Data visualization resources",
+    "content": " ",
+    "url": "/docs/resources/viz.html#data-visualization-resources",
+    "relUrl": "/docs/resources/viz.html#data-visualization-resources"
+  },"61": {
+    "doc": "Data visualization",
+    "title": "General",
+    "content": ". | Claus O. Wilke’s Fundamentals of Data Visualization | Datawrapper’s What to consider when choosing colors for data visualization: overview of considerations when choosing colors and links to additional resources | . ",
+    "url": "/docs/resources/viz.html#general",
+    "relUrl": "/docs/resources/viz.html#general"
+  },"62": {
+    "doc": "Data visualization",
+    "title": "R",
+    "content": ". | BBC Visual and Data Journalism cookbook for R graphics | R Econ Visual Library: sample R code for common economics visualizations | The R Graph Gallery: sample R code for data visualization | Tidy Tuesday: weekly R community activity to share data visualizations and the code to create them | . ",
+    "url": "/docs/resources/viz.html#r",
+    "relUrl": "/docs/resources/viz.html#r"
+  },"63": {
+    "doc": "Data visualization",
+    "title": "Stata",
+    "content": ". | Asjad Naqvi’s Stata Graph Schemes: guide to create customized graph schemes and package with off-the-shelf schemes | Ben Jann’s palletes: package with color palettes, symbol palettes, and line pattern palettes | The Stata Gallery: sample code for advanced data visualization | . ",
+    "url": "/docs/resources/viz.html#stata",
+    "relUrl": "/docs/resources/viz.html#stata"
+  },"64": {
+    "doc": "Data visualization",
+    "title": "Data visualization",
+    "content": " ",
+    "url": "/docs/resources/viz.html",
+    "relUrl": "/docs/resources/viz.html"
+  }
+}
