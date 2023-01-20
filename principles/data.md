@@ -78,7 +78,7 @@ It often happens that analysis datasets are supplied by outside collaborators. I
 [Hadley Wickham's "Tidy data" paper](https://vita.had.co.nz/papers/tidy-data.pdf){: .btn .btn-more }{:target="_blank"}
 ["Tidy data" chapter in R for Data Science](https://r4ds.had.co.nz/tidy-data.html){: .btn .btn-more }{:target="_blank"}
 [Data set keys](https://dimewiki.worldbank.org/ID_Variable_Properties){: .btn .btn-more }{:target="_blank"}
-[Template data documentation](http://127.0.0.1:4000/docs/templates/data-readme.html){: .btn .btn-more }{:target="_blank"}
+[Template data documentation](https://devinnovationlab.github.io/guides/templates/data-readme.html){: .btn .btn-more }{:target="_blank"}
 
 ## Be mindful of sensitive data
 
