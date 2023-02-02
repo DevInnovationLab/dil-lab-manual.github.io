@@ -1,6 +1,6 @@
 # DIL Analytics Manual
 
-Repository featuring DIL Analytics Manual and its associated documents. To access the manual, go to [devinnovationlab.github.io/guides/](devinnovationlab.github.io/guides/).
+Repository featuring DIL Analytics Manual and its associated documents. To access the manual, go to [devinnovationlab.github.io/guides/](https://devinnovationlab.github.io/guides/).
 
 ## How to contribute
 
