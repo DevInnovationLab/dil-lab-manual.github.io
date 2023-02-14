@@ -67,7 +67,7 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 - *Divide scripts into sections with self-explanatory header titles.* Both the Stata do-file editor and RStudio have built-in features for this.
 - *Add comments to the code*: self-documentation can only go so far. Comments should explain not only *what* you are doing, but *why* you are doing it.
 - *Add metadata on functionality, inputs, and outputs to your code.* The creation of documentation for functions is automated in R and Python, but this type of information is also important when writing data processing and analysis scripts. For the latter, include a header with information on the purpose of your code, what files it uses, and what files it creates.
-- *Write a project readme and have a system to keep it updated.** Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code.
+- *Write a project readme and have a system to keep it updated.* Create the habit of updating the readme when you finish a task, open a pull request, or ask someone to review your code.
 
 [Variable names in survey research](https://medium.com/@janschenk/variable-names-in-survey-research-a18429d2d4d8){: .btn .btn-more }{:target="_blank"}
 [Naming files](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf){: .btn .btn-more }{:target="_blank"}
