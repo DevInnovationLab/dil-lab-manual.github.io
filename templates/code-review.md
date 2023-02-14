@@ -24,15 +24,15 @@ title: Code review checklist
 - Does the code follow a style guide?
 - Are variable, file, and function names clear and communicative?
 - Are lines in the script short?
-> As a rule of thumb, each line should have no more than 80 characters
+> As a rule of thumb, each line should have no more than 80 characters.
 - Is each script in the project short?
-> As a rule of thumb, each script should have no more than 200 lines
+> As a rule of thumb, each script should have no more than 200 lines.
 - Are white spaces and indentation used to make the code clearer and more accessible?
 
 ## Correctness 
 - Does the code do what it is supposed to do? 
  > For example, does the code to construct indicators follow their definition from the documentation? Do regressions follow the model specified?
-- Are there any unintended consequences for this line code? Be particularly mindful of operations that change the structure of the data, for example by combining or reshaping data sets and aggregating variables or observations.
+- Are there any unintended consequences for this line code? Be particularly mindful of operations that change the structure of the data, such as combining or reshaping data sets and aggregating variables or observations.
  > For example, is it changing the number of observations, the number of missing values, or the results? Is it replacing files or variables that should not be edited?
 - Are any values hard-coded into the code? Could they be calculated in the code instead? Could this input be defined in a different part of the code to make it more salient?
 - Are there any sanity checks being performed manually that could be automated? 
@@ -47,13 +47,13 @@ title: Code review checklist
 - Is the code using pre-specified functions for all tasks where that is possible?
 > For example, using post-estimation commands to calculate confidence intervals instead or manually coding them.
 - Do inputs have a single representation in the code?
-> For examples, the list of outcome and control variables is defined in a single place and referred to using a function, macro, or object whenever needed?
+> For example, the list of outcome and control variables is defined in a single place and referred to using a function, macro, or object whenever needed?
 
 ### Automation
 - Are any manual steps required to run the code? Could they be automated?
 - Are outputs such as tables and figures exported through code to an accessible format (csv, tex, png, svg)?
 - Are outputs formatted using code, so they are ready for publication once exported?
->For example, are all the necessary labels and notes added in the code? Are the number of decimals, font sizes and other formatting automated? 
+> For example, are all the necessary labels and notes added in the code? Are the number of decimals, font sizes and other formatting automated? 
 
 ## Reproducibility
 - Can you run the code from start to end? If not, can you tell why?
@@ -63,7 +63,7 @@ title: Code review checklist
 - Were file paths easy to modify? Did you have to modify them in many different lines of the code? If so, how could this process be simplified?
 - If the code is creating any outputs (such as data sets, tables, and figures), are you able to recreate them? Are they the same as in the original code?
 - Are there any random processes being used in the code? If so, are they reproducible?
-> Sampling, treatment assingment and bootstrapping are examples of common tasks that involve random processes. 
+> Sampling, treatment assignment and bootstrapping are examples of common tasks that involve random processes. 
 
 ## Good things
 - Did you learn about any new functions or packages reading this code?
@@ -81,7 +81,7 @@ title: Code review checklist
 - Are all variables using the most efficient data type for the type of information they contain?
 > For example, in R, categorical variables are stored as factors and logical variables are stored as booleans. In Stata, categorical variables are stored as labeled integers and the data set is compressed.
 - Are data sets stored in formats that are native to the software used?
-> For example, rds and rda for R and dta for Stata.
+> For example, `.rds` and `.rda` for R and `.dta` for Stata.
 - Could operations be simplified by using a tidy data set as opposed to long or wide?
 - Are categorical variables correctly labeled?
 - Are categorical variables consistently labeled?
