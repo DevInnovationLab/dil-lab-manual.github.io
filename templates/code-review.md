@@ -6,6 +6,8 @@ title: Code review checklist
 
 # Code review checklist
 
+[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/code-review.docx){: .btn .btn-more }{:target="_blank"}
+
 ## Readability and style
 
 ### Do you understand what the code is doing?
