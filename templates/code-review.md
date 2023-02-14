@@ -10,13 +10,14 @@ title: Code review checklist
 
 ### Do you understand what the code is doing?
 - What parts do you not understand? 
-- What type of comments or documentation would make it easier for you to understand them?
-- What changes to the code would make it more understandable?
-- Note that comments can be helpful to explain what the code is doing, but if the code isn't self-explanatory, it should be made simpler.
-- Are there any parts of the code that you can understand, but that are too complex? For example, were there any parts of the code that you had to read over and over to understand? Are there parts of the code that you would find difficult to change if you wanted to modify them?
+- What type of comments or documentation would make it easier for you to understand them? What changes to the code would make it more understandable?
+> Note that comments can be helpful to explain what the code is doing, but if the code isn't self-explanatory, it should be made simpler.
+- Are there any parts of the code that you can understand, but that are too complex? 
+> For example, were there any parts of the code that you had to read over and over to understand? Are there parts of the code that you would find difficult to change if you wanted to modify them?
 
 ### Do you understand why a task is implemented the way it is?
-- Are there any tasks you would approach differently? For example, would you use a different function or package? Would you change the order in which things are done? 
+- Are there any tasks you would approach differently? 
+> For example, would you use a different function or package? Would you change the order in which things are done? 
 - What decisions do you not understand? What type of comments or documentation would make it easier for you to understand them?
 
 ### Style
