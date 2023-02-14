@@ -6,8 +6,6 @@ title: Code review checklist
 
 # Code review checklist
 
-[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/code-review.docx){: .btn .btn-more }{:target="_blank"}
-
 ## Readability and style
 
 ### Do you understand what the code is doing?
@@ -100,3 +98,5 @@ title: Code review checklist
 - Do the methods described in the notes correspond to those implemented in the code?
 - Are output tables are [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Submit_Table)
 - Are output graphs are [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Reviewing_Graphs)
+
+[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/code-review.docx){: .btn .btn-more }{:target="_blank"}
