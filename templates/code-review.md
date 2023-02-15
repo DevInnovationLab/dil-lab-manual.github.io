@@ -16,7 +16,7 @@ During the review, read each line of code and indicate whenever you encounter an
 [View markdown version](https://raw.githubusercontent.com/DevInnovationLab/guides/gh-pages/templates/code-review.md){: .btn .btn-more }{:target="_blank"}
 [More code review resources](https://devinnovationlab.github.io/guides/resources/git.html#code-review){: .btn .btn-more }{:target="_blank"}
 
---
+---
 
 ## Readability and style
 
