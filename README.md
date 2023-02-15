@@ -4,5 +4,5 @@ Repository featuring DIL Analytics Manual and its associated documents. To acces
 
 ## How to contribute
 
-To make a suggestion, create an [issue](https://github.com/DevInnovationLab/guides/issues). To make direct contributions, create a fork and make your edits to the `gh-pages` branch.
+To make a suggestion, create an [issue](https://github.com/DevInnovationLab/guides/issues). To make direct contributions, create a fork, make your edits to the `gh-pages` branch, and open a pull request.
 
