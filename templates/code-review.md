@@ -6,6 +6,18 @@ title: Code review checklist
 
 # Code review checklist
 
+## How to use this checklist
+
+The items on this checklist are meant to serve as a guide on what a reviewer should look for when reading code. It lists common issues we have found in the past. Note that this is not an exhaustive list and that not all items will apply to every code being reviewed. Think of it as a starting point and use your judgment on whether an item is relevant or whether there are any issues in the code that are not listed below ([suggestions and contributions are very welcome!](https://github.com/DevInnovationLab/guides#how-to-contribute)).
+
+During the review, read each line of code and indicate whenever you encounter any of the issues described below. This can be done by adding comments directly to the code, to a pull request, or in a separate document. If you choose the latter, you can download the checklist in Word or markdown format below. In this case, write down the lines of the code in which you have identified each potential issue. Whatever approach you take, read the code carefully, be constructive in your feedback, indicate what changes you would suggest, and point out which items are creating bugs, which ones would make the code more accessible, and [which ones are more trivial suggestions](https://stackoverflow.com/questions/27810522/what-does-nit-mean-in-hacker-speak#:~:text=Sometimes%20the%20reviewer%20will%20prefix,we'd%20like%20you%20to.&text=A%20%22nit%22%20means%20a%20trivial,it%20may%20be%20an%20acronym.), such as style issues.
+
+[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/code-review.docx){: .btn .btn-more }{:target="_blank"}
+[View markdown version](https://raw.githubusercontent.com/DevInnovationLab/guides/gh-pages/templates/code-review.md){: .btn .btn-more }{:target="_blank"}
+[More code review resources](https://devinnovationlab.github.io/guides/resources/git.html#code-review){: .btn .btn-more }{:target="_blank"}
+
+--
+
 ## Readability and style
 
 ### Do you understand what the code is doing?
@@ -96,7 +108,6 @@ title: Code review checklist
 - Can you easily identify which parts of the code create each different table or figure?
 - Do tables and graphs contain detailed notes explaining the methods, such that exhibits can be read and understood on their own?
 - Do the methods described in the notes correspond to those implemented in the code?
-- Are output tables are [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Submit_Table)
-- Are output graphs are [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Reviewing_Graphs)
+- Are output tables [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Submit_Table)?
+- Are output graphs [easy to interpret](https://dimewiki.worldbank.org/Checklist:_Reviewing_Graphs)?
 
-[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/code-review.docx){: .btn .btn-more }{:target="_blank"}
