@@ -87,13 +87,12 @@ During the review, read each line of code and indicate whenever you encounter an
 ### Reviewing data sets
 - Is the data uniquely and fully identified?
 - Is it clear what the unit of observation in the data is?
-- Is the data saved in a file format that is suited for the software used?
+- Is the data saved in a file format that is native for the software used?
+> For example, `.rds` and `.rda` for R and `.dta` for Stata.
 - Is there suitable data documentation to undestand the contents of the data?
 - Is the file encoding suitable to the data?
 - Are all variables using the most efficient data type for the type of information they contain?
 > For example, in R, categorical variables are stored as factors and logical variables are stored as booleans. In Stata, categorical variables are stored as labeled integers and the data set is compressed.
-- Are data sets stored in formats that are native to the software used?
-> For example, `.rds` and `.rda` for R and `.dta` for Stata.
 - Could operations be simplified by using a tidy data set as opposed to long or wide?
 - Are categorical variables correctly labeled?
 - Are categorical variables consistently labeled?
