@@ -25,6 +25,7 @@ parent: External resources
 - [Tidyverse Style Guide](https://style.tidyverse.org/)
 
 ## Sample code
+- [Demo for exporting tables](https://github.com/RRMaximiliano/r-latex-tables-sum-stats)
 - [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
 - [R main script example](https://github.com/worldbank/geolocation-twitter-urban-planning/blob/main/datawork/_master.R)
 - [Regression tables](https://evalsp20.classes.andrewheiss.com/reference/regtables/)

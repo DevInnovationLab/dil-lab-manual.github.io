@@ -21,5 +21,6 @@ parent: External resources
 ## Stata
 
 - [Asjad Naqvi's Stata Graph Schemes](https://medium.com/the-stata-guide/stata-schemes-5ef99d099585): guide to create customized graph schemes and package with off-the-shelf schemes
+- [Asjad Naqvi's Stata Guide](https://github.com/asjadnaqvi/The-Stata-Guide): sample code for selected graphs
 - [Ben Jann's `palletes`](http://repec.sowi.unibe.ch/stata/palettes/index.html): package with color palettes, symbol palettes, and line pattern palettes
 - [The Stata Gallery](https://medium.com/the-stata-gallery): sample code for advanced data visualization
