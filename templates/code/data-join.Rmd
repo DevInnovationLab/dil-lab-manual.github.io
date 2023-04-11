@@ -1,0 +1,104 @@
+---
+title: "Data join"
+output:
+  rmdformats::robobook:
+    code_folding: show
+---
+
+```{r}
+packages <-
+  c(
+    "tidyverse",
+    "assertthat",
+    "janitor"
+  )
+
+pacman::p_load(
+  packages, 
+  dep = TRUE, 
+  character.only = TRUE
+)
+```
+
+
+## Load data
+
+Data set 1 comes from XX and contains data on XX
+```{r}
+data1 <-
+```
+
+Data set 2 comes from XX and contains data on XX
+```{r}
+data2 <-
+```
+
+
+## Check unique identifiers
+
+```{r}
+assert_that(
+  data1 %>%
+    select(id) %>%
+    n_distinct()
+  ==
+    nrow(data1)
+)
+```
+
+```{r}
+assert_that(
+  data2 %>%
+    select(id) %>%
+    n_distinct()
+  ==
+    nrow(data2)
+)
+```
+
+If data sets are not uniquely identified, investigate why and proceed to the next step once any issues with duplicate entries have been fixed. Joining data sets that are not uniquely identified can create errors. 
+
+
+## Check overlap between data sets
+
+- There are `r data1 %>% select(id) %>% n_distinct()` children in data1
+- There are `r data1 %>% filter(!is.na(math_score)) select(id) %>% n_distinct()` children in data1 with valid math scores
+- There are `r data2 %>% select(id) %>% n_distinct()` children in data2
+- There are `r data1 %>% filter(!is.na(math_score), childid %in% data2$childid) select(id) %>% n_distinct()` children in data1 with valid math score that are also present in data2 (this is the number of observations that we expect will be matched)
+
+If you expected all observations to be present in both data sets, investigate why some are missing from one data set or another.
+
+
+## Join data sets
+
+```{r}
+data_joined <-
+  data1 %>%
+  inner_join(
+    data2, 
+    by = "childid"
+  )
+```
+
+Check which observations matched or not
+
+```{r}
+data_joined <-
+  data_joined %>%
+  mutate(
+    missing_data1 = is.na(variable_from_data1),
+    missing_data2 = is.na(variable_from_data2),
+  )
+```
+
+Do the numbers of matched observations match the numbers predicted in the previous section?
+
+```{r}
+data_joined %>%
+  tabyl(missing_data1, missing_data2)
+```
+
+If the numbers do not match, investigate why.
+
+## Save data 
+
