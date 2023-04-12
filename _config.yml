@@ -1,6 +1,6 @@
 title: DIL Analytics Manual
 description: 
-#theme: just-the-docs
+theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
 
 url: https://devinnovationlab.github.io/guides/
@@ -23,7 +23,7 @@ collections:
     permalink: "resources/"
     output: true
     name: External resources
-
+    
 # Files that will not be rendered in the website
 # exclude:
 
