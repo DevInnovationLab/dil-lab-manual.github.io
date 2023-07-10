@@ -2,7 +2,6 @@
 layout: default
 parent: DIL templates
 title: Data dictionary
-has_children: true
 ---
 
 # Auto dataset

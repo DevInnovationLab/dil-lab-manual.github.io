@@ -2,7 +2,6 @@
 layout: default
 parent: DIL templates
 title: Paper submission checklist
-has_children: true
 ---
 
 # Paper submission checklist
