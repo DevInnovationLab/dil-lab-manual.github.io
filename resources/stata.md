@@ -16,11 +16,16 @@ parent: External resources
 - [Stata cheatsheets](https://www.stata.com/bookstore/stata-cheat-sheets/)
 
 ## Sample code
+- [Demo for exporting tables from Stata](https://github.com/worldbank/stata-tables)
+- [Demo for exporting tables from Stata with LaTeX’s three part table](https://github.com/RRMaximiliano/stata-latex-tables)
+- [Demo for testing a reproduciblity package](https://github.com/dime-worldbank/reproducible-template-stata)
 - [Mostly harmless replication repository](https://github.com/vikjam/mostly-harmless-replication)
 - [Stata main script example](https://github.com/worldbank/rio-safe-space/blob/master/Reproducibility%20Package/MASTER.do)
 
+
 ## Useful packages
+- [Ben Jann's packages](http://repec.sowi.unibe.ch/stata/): includes packages to export tables (estout), customize graphs (coefplot, grstyles, palettes) and create dynamic documents (webdoc, texdoc)
 - [`gtools`](https://gtools.readthedocs.io/en/latest/): "faster Stata for big data" -- uses C to create faster versions of functions like reshape, collapse, isid, egen, levelsof, duplicates, and unique/distinct.
 - [IPA’s high-frequency checks template](https://github.com/PovertyAction/high-frequency-checks)
 - [IPA GitHub repositories](https://github.com/PovertyAction): functions for Survey CTO and Stata
-
+- [J-PAL GitHub repositories](https://github.com/J-PAL): includes sample code for to scan data for PII in R and Stata, plus resources for data quality checks

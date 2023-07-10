@@ -49,3 +49,6 @@ title: Data dictionary
 | `gear_ratio`   | Gear ratio             | Continuous  |                   |                           |
 | `foreign`      | Car origin             | Binary      |                   | 0 Domestic <br> 1 Foreign |
 
+[Download Word version](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/data-readme.docx){: .btn .btn-more }{:target="_blank"}
+
+
