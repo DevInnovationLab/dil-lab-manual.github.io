@@ -20,5 +20,5 @@ How this looks in practice will depend on how exploratory you are in your approa
 In cases where you know something about the problem, you can code a DGP without first looking at the data. Typically, however, you will use some existing data to design your DGP. For example, if studying an intervention meant to reduce child mortality in a country, you can typically find census data with geographical and temporal variation for that country. This information will allow you to simulate a realistic data structure (via resampling, adding noise, or just visually checking that your DGP matches census data) against which you can test your methods. Note as well that programming a DGP first will often help you spot problems in data from your research project. In our example, suppose the project-collected data for an indicator has a distribution which does not resemble that of the same indicator on the census (e.g., it has much higher mean or much lower variation). Then you may need to ask yourself if this indicator is defined consistently with other data sources, in what way your sample is representative, or hypothesise some necessary model adjustments.
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/create.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/create-good-datasets.md %}){: .btn .btn-more }
 </span>

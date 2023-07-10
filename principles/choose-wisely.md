@@ -16,5 +16,5 @@ As soon as you get some data, you will probably want to start exploring it. This
 Apart from choosing a software, try to identify in advance which information, tasks, packages, functions, etc., you will require. Identifying procedures that work for a project is a collaborative process. Discuss with other coworkers what you need, agree on an analysis plan, organize the data work on a [data map](https://dimewiki.worldbank.org/Data_Map){:target="_blank"}, and *then* start wrangling the data. 
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/live.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/live-forever.md %}){: .btn .btn-more }
 </span>

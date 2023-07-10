@@ -24,5 +24,5 @@ nav_order: 2
 [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html){: .btn .btn-more }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/dont.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/dont-repeat-yourself.md %}){: .btn .btn-more }
 </span>

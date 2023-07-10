@@ -16,5 +16,5 @@ Your first resource should be looking for already existing answers: try pasting 
 
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/automate.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/automate-your-workflow.md %}){: .btn .btn-more }
 </span>

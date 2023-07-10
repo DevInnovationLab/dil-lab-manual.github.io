@@ -21,5 +21,5 @@ Whichever of these formats you choose, you will still need to decide whether a g
 [**Internal** -- DIL templates for papers, memos, presentations and reports](https://github.com/DevInnovationLab/DIL-Templates){: .btn .btn-internal }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/start.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/start-simple.md %}){: .btn .btn-more }
 </span>

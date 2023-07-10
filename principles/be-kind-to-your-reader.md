@@ -41,5 +41,5 @@ Coding is a collaborative process with ourselves and others. Collaboration is on
 [Example of protocol to update readme](https://github.com/DevInnovationLab/dil-template-repo/blob/main/CONTRIBUTING.md#opening-a-pull-request-from-a-feature-branch-to-develop){: .btn .btn-more }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/track.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/track-changes.md %}){: .btn .btn-more }
 </span>

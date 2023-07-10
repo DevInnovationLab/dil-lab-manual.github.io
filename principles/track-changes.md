@@ -20,5 +20,5 @@ There are many version control systems, but some are clearly better than others.
 [Tracking changes to images](https://github.blog/2011-03-21-behold-image-view-modes/){: .btn .btn-more }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/ask.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/ask-questions.md %}){: .btn .btn-more }
 </span>

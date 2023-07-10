@@ -22,5 +22,5 @@ It often happens that analysis datasets are supplied by outside collaborators. I
 [Template data documentation](https://devinnovationlab.github.io/guides/templates/data-readme.html){: .btn .btn-more }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/mindful.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/sensitive-data.md %}){: .btn .btn-more }
 </span>

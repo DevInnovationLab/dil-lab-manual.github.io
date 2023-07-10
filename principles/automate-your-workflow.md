@@ -27,5 +27,5 @@ Learning how to use these tools can be time consuming, but remember that not eve
 
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/test.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/test-your-code.md %}){: .btn .btn-more }
 </span>

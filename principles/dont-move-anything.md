@@ -17,6 +17,6 @@ For example, you may download data from a website in such a format that makes an
 [DIL data folder structure](https://github.com/DevInnovationLab/dil-template-repo/tree/main/data){: .btn .btn-more }{:target="_blank"}
 
 <span class="fs-8">
-[Next section]({{ site.baseurl }}{% link principles/show.md %}){: .btn .btn-more }
+[Next section]({{ site.baseurl }}{% link principles/show-dont-tell.md %}){: .btn .btn-more }
 </span>
 
