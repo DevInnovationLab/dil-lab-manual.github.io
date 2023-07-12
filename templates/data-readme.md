@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: DIL templates
-title: Data dictionary
+title: Data dictionary template
 ---
 
 # Auto dataset

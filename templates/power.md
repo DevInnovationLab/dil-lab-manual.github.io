@@ -7,6 +7,6 @@ title: Power calculations template
 [Download R Markdown code](https://github.com/DevInnovationLab/guides/raw/gh-pages/templates/power.Rmd){: .btn .btn-more }{:target="_blank"}
 
 <div>
-    <iframe src="power-notebook.html" allowfullscreen="" frameborder="0">
+    <iframe src="power-notebook.html" allowfullscreen="" width="100%" height="100%" frameborder="0">
     </iframe>
 </div>
