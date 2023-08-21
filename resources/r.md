@@ -34,3 +34,4 @@ parent: External resources
 - [`reprex`](https://reprex.tidyverse.org/)
 - [`DeclareDesign`](https://declaredesign.org/getting-started.html): suite of packages to [simulate data](https://declaredesign.org/r/fabricatr/), [randomize treatment assignment and sampling](https://declaredesign.org/r/randomizr/), [describe research design](https://declaredesign.org/r/declaredesign/) and [conduct linear estimations](https://declaredesign.org/r/estimatr/)
 - [`fixest`](https://lrberge.github.io/fixest/): functions to perform estimations with multiple fixed-effects
+- [Comparison of R packages for Automated Exploratory Data Analysis](https://arxiv.org/abs/1904.02101)
