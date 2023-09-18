@@ -38,17 +38,6 @@ main branch           # Root directory for lab guides
 │   │   │   ├── stratification.R
 │   │   │   ├── mht.R
 │   ├── presentations/  # Slides for presentations on power calculations
-│   ├── topics/         # Detailed articles are linked in the main power_calc document and are stored in this folder (all as Notebooks)
-│   │   ├── covariates/ 	#
-│   │	│   ├── examples/   	# Example notebooks for ICC estimation from prior projects and datasets
-│   │   ├── ICC/        	#
-│   │	│   ├── examples/   	# Example notebooks for ICC estimation from prior projects and datasets
-│   │   ├── panel_RCT/      #
-│   │	│   ├── examples/   	# Example code that illustrates power calculations 
-│   │   ├── stratification/ #
-│   │	│   ├── examples/   	# Example code stratification / matching
-│   │   ├── multip_testing/ # MHT corrections
-│   │	│   ├── examples/   	# Example code MHT
 ├── spatial/			# GIS @ DIL (in progress)
 
 ```
