@@ -31,11 +31,11 @@ main branch           # Root directory for lab guides
 ├── power_calc/       	# High-level document summarizing power calculations @ DIL (including step-by-step guidlines for project specific notebooks)
 │   ├── shiny/       	# An interactive app that showcases all essential examples
 │   ├── examples/     	# Example documents with replication that showcase power calculations from past DIL projects
-│   │   ├── covariates.R
-│   │   ├── icc.R
-│   │   ├── panel_rct.R
-│   │   ├── stratification.R
-│   │   ├── mht.R
+│   │   ├── covariates.Rmd
+│   │   ├── icc.Rmd
+│   │   ├── panel_rct.Rmd
+│   │   ├── stratification.Rmd
+│   │   ├── mht.Rmd
 │   ├── presentations/  # Slides for presentations on power calculations
 ├── spatial/			# GIS @ DIL (in progress)
 
