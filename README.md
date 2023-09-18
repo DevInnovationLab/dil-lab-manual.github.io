@@ -16,6 +16,17 @@ Proposed file structure to host all DIL "educational documents" and important ex
 
 ```
 gh-pages branch       # DIL Analytics Manual
+├── Principles of Analytics
+├── Coding Guides # Detailed articles with general code snippets
+│   |── Power calculations/ 	#
+│   │   ├── Covariates
+│   │   ├── ICC      	
+│   │   ├── Panel RCT
+│   │   ├── stratification
+│   │   ├── Multiple Hypotheses Testing
+├── DIL templates
+├── External resources
+
 main branch           # Root directory for lab guides
 ├── power_calc/       	# High-level document summarizing power calculations @ DIL (including step-by-step guidlines for project specific notebooks)
 │   ├── shiny/       	# An interactive app that showcases all essential examples
