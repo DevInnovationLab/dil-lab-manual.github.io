@@ -10,7 +10,7 @@ collections:
   guides:
     permalink: "guides/"
     output: true
-    name: Data work guides
+    name: Coding guides
   principles:
     permalink: "principles/"
     output: true
