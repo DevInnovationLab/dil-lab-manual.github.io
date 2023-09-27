@@ -6,3 +6,5 @@ has_children: true
 ---
 
 # Coding guides
+
+Collection of guides.
