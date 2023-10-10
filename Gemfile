@@ -7,3 +7,6 @@ gem "just-the-docs", "0.4.0.rc3" # currently the latest pre-release
 # gem "just-the-docs"            # the latest release - currently 0.3.3
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+# For citations
+gem 'jekyll-scholar', group: :jekyll_plugins

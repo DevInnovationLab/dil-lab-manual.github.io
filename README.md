@@ -4,6 +4,7 @@ This website uses a Jekyll template. The github.io page is automatically updated
 
 ## Building and previewing your site locally
 
+When rendering locally you need to manually "turn off" the option of using `remote_theme` and just use `theme` instead in `_config.yml`.
 Assuming Jekyll and Bundler are installed on your computer:
 
 1.  Change your working directory to the root directory of your site.
