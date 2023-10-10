@@ -28,7 +28,3 @@ nav_order: 99
 - [Schochet (2013)](#Schochet2013): power for binary outcomes
 - [Gelman, Hill, Vehktari (2020)](#GelmanHillVehtari2020): Regression and Other Stories (esp. Chapter 16)
 - [Gelman & Carlin (2014)](#GelmanCarlin2014): for a good discussion on post-hoc power
-
-<!-- ### References --!>
-
-<!-- {% bibliography %} --!>
