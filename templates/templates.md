@@ -1,8 +1,8 @@
 ---
 layout: default
-title: DIL templates
-nav_order: 3
+title: Templates
+nav_order: 4
 has_children: true
 ---
 
-# DIL templates
+# DIL Templates
