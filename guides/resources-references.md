@@ -4,6 +4,7 @@ title: Resources and references
 grand_parent: Coding guides
 parent: Power calculations
 nav_order: 99
+bibliography: DIL_power.bib
 ---
 
 # Useful Links
