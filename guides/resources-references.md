@@ -31,4 +31,4 @@ nav_order: 99
 
 ### References
 
-{% bibliography --file power %}
+{% bibliography %}
