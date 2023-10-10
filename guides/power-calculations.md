@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Power calculations
-parent: Coding guides
+parent: Guides
 has_children: true
 has_toc: true
 ---

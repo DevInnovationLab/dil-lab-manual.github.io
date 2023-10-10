@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Introduction to statistical power
-grand_parent: Coding guides
+grand_parent: Guides
 parent: Power calculations
 nav_order: 3
 ---

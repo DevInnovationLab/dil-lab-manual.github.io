@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Power calculations at DIL
-grand_parent: Coding guides
+grand_parent: Guides
 parent: Power calculations
 nav_order: 1
 ---

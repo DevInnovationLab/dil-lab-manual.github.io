@@ -1,7 +1,7 @@
 ---
 layout: default
 title: A recap of hypoyhesis testing
-grand_parent: Coding guides
+grand_parent: Guides
 parent: Power calculations
 nav_order: 5
 ---

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Coding guides
+title: Guides
 nav_order: 3
 has_children: true
 ---
 
-# Coding guides
+# DIL Guides
 
 Collection of guides.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How to perform power calculations for your project, step by step
-grand_parent: Coding guides
+grand_parent: Guides
 parent: Power calculations
 nav_order: 2
 ---

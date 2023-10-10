@@ -2,7 +2,7 @@
 layout: default
 title: Power through simulations
 grand_grand_parent: Selected advanced topics
-grand_parent: Coding guides
+grand_parent: Guides
 parent: Power calculations
 nav_order: 66
 ---

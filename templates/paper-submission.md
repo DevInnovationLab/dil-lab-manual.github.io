@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: DIL templates
+parent: Templates
 title: Paper submission checklist
 ---
 
