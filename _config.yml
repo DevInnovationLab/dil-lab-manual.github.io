@@ -24,6 +24,10 @@ collections:
     output: true
     name: External resources
 
+# Plugins
+plugins:
+  - jekyll-scholar
+
 # Files that will not be rendered in the website
 # exclude:
 
