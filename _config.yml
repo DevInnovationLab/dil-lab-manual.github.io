@@ -24,10 +24,6 @@ collections:
     output: true
     name: External resources
 
-# Plugins
-plugins:
-  - jekyll-scholar
-
 # Files that will not be rendered in the website
 # exclude:
 
@@ -64,3 +60,7 @@ callouts:
   good:
     title: Good
     color: green
+
+# Plugins
+plugins:
+  - jekyll-scholar
