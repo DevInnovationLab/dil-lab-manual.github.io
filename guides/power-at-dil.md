@@ -19,5 +19,5 @@ Such a document will also help the team think clearly about research design and 
 -   Always link to the folder/repository where the code is stored so anyone can always have a look at the latest, up-to-date version (ideally also push these reports to the Github repository of the respective project).
 -   Every number has to be easily reproducible. If there is no replication code, then every number that was plugged into a formula has to be stated clearly.
 
-You can find some example notebooks in the `power_calc/examples/` folder following [this link (main branch of guides repo)](https://github.com/DevInnovationLab/guides/tree/main).
+You can find some example notebooks in the `power/examples/` folder following [this link (main branch of `internal-resources` repo, Github acces required)](https://github.com/DevInnovationLab/internal-resources/tree/main/power/examples).
 
