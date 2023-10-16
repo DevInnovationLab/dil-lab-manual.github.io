@@ -64,7 +64,7 @@ The average treatment effect in such a design is equal to the weighted average o
 
 The regression specification when the randomization was carried out within stratum changes to:
 
-$$Y_{ij} = \beta_0 + \beta_1 T_i + M_{ij}\gamma + v_j + \varepsilon_{ij},$$ 
+$$Y_{ij} = \beta_0 + \beta_1 D_i + M_{ij}\gamma + v_j + \varepsilon_{ij},$$ 
 
 where this is a fully saturated model with $$M$$ being a set of dummy variables indicating the respective stratum (or block) $$j$$ for every observation $$i$$.
 You can think of these as fixed effects and we do not care about the set of unit-specific coefficients $$\gamma$$.
