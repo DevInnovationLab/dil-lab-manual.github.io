@@ -1,6 +1,6 @@
 title: DIL Analytics Manual
 description: 
-theme: just-the-docs
+#theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
 
 url: https://devinnovationlab.github.io/guides/
@@ -60,3 +60,7 @@ callouts:
   good:
     title: Good
     color: green
+
+# Plugins
+plugins:
+  - jekyll-scholar
