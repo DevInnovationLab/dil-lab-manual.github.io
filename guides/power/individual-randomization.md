@@ -33,7 +33,7 @@ Writing down this hypothesis test formally, it is straightforward to derive a cl
 
 The standard deviation of the outcome is usually unknown and hence needs an estimation -- or a best guess.
 Estimating the standard deviation of the outcome can be difficult, specially if there is little prior work on the study's subject and context.
-However, it is necessary to conduct power calculations, and small-scale data collection is often the only good way to get a credible estimate.
+However, it is necessary to conduct power calculations, and data collection is often the only good way to get a credible estimate.[^1]
 
 We can either assume that the variance of the outcome is homogeneous across the treated and control group, and the standard deviation is $$\sigma$$, or we can assume that the variance is different for the two groups, and the standard deviations are $$\sigma_0, \sigma_1$$ respectively.
 We only focus on the first case here.
@@ -76,3 +76,4 @@ $$\pi$$ represents the fraction of the sample that is treated and $$z$$ refers t
 **In practice, like in the continuous case, we can also use the built-in function `power.prop.test()`.**
 
 
+[^1]: It is common for studies to rely on survey pilots for an estimate of the standard deviation of the outcome variable. When doing so, researchers should take into account that pilot samples are usually small, so estimates of data moments are noisy by construction.
